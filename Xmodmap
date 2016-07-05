@@ -1,0 +1,10 @@
+keycode  97 = underscore backslash underscore backslash
+keycode 100 = Prior NoSymbol
+keycode 101 = Next NoSymbol
+
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
