@@ -3,7 +3,7 @@
   (setq user-emacs-directory (file-name-directory load-file-name)))
 (add-to-list 'load-path (locate-user-emacs-file "el-get"))
 (require 'el-get)
-(setq el-get-dir (locate-user-emacs-file ""))
+(setq el-get-dir (locate-user-emacs-file "lisp"))
 
 ;; Install package
 (el-get-bundle auto-complete)
