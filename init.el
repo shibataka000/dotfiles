@@ -8,9 +8,6 @@
 ;; Install package
 (el-get-bundle auto-complete)
 (el-get-bundle markdown-mode)
-(el-get-bundle go-mode)
-(el-get-bundle scala-mode2)
-(el-get-bundle haskell-mode)
 (el-get-bundle python-pep8)
 
 ;; Set key-bind
@@ -24,6 +21,3 @@
 
 ;; Dockerfile
 (setq auto-mode-alist (cons '("Dockerfile" . conf-mode) auto-mode-alist))
-
-;; go-mode
-(add-hook 'go-mode-hook '(lambda () (setq tab-width 4)))
