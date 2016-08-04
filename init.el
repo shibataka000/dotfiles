@@ -9,6 +9,7 @@
 (el-get-bundle auto-complete)
 (el-get-bundle markdown-mode)
 (el-get-bundle python-pep8)
+(el-get-bundle yaml-mode)
 
 ;; Set key-bind
 (define-key global-map "\C-x\C-b" 'electric-buffer-list)
