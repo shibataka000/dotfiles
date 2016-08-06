@@ -11,6 +11,10 @@
 (el-get-bundle python-pep8)
 (el-get-bundle yaml-mode)
 
+;; Set window and color
+(tool-bar-mode 0)
+(load-theme 'tango-dark t)
+
 ;; Set key-bind
 (define-key global-map "\C-x\C-b" 'electric-buffer-list)
 (define-key global-map "\C-cr" 'replace-string)
