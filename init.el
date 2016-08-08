@@ -8,7 +8,6 @@
 ;; Install package
 (el-get-bundle auto-complete)
 (el-get-bundle markdown-mode)
-(el-get-bundle python-pep8)
 (el-get-bundle yaml-mode)
 
 ;; Set window and color
@@ -18,7 +17,6 @@
 ;; Set key-bind
 (define-key global-map "\C-x\C-b" 'electric-buffer-list)
 (define-key global-map "\C-cr" 'replace-string)
-(define-key global-map "\C-c8" 'pep8)
 (define-key global-map "\C-cp" 'markdown-preview)
 
 ;; Don't create backup file
@@ -30,7 +28,7 @@
 ;; Python
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
+  (defun flymake-pep8-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
 		       'flymake-create-temp-inplace))
 	   (local-file (file-relative-name
@@ -38,7 +36,7 @@
 			(file-name-directory buffer-file-name))))
       (list "/usr/local/bin/pep8"  (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
-	       '("\\.py\\'" flymake-pyflakes-init)))
+	       '("\\.py\\'" flymake-pep8-init)))
 (defun flymake-show-help ()
   (when (get-char-property (point) 'flymake-overlay)
     (let ((help (get-char-property (point) 'help-echo)))
