@@ -10,6 +10,7 @@
 (el-get-bundle markdown-mode)
 (el-get-bundle dockerfile-mode)
 (el-get-bundle yaml-mode)
+(el-get-bundle terraform-mode)
 
 ;; Set window and color
 (tool-bar-mode 0)
