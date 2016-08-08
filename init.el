@@ -8,6 +8,7 @@
 ;; Install package
 (el-get-bundle auto-complete)
 (el-get-bundle markdown-mode)
+(el-get-bundle dockerfile-mode)
 (el-get-bundle yaml-mode)
 
 ;; Set window and color
@@ -21,9 +22,6 @@
 
 ;; Don't create backup file
 (setq make-backup-files nil)
-
-;; Dockerfile
-(setq auto-mode-alist (cons '("Dockerfile" . conf-mode) auto-mode-alist))
 
 ;; Python
 (add-hook 'find-file-hook 'flymake-find-file-hook)
