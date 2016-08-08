@@ -12,8 +12,10 @@
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
 
-;; Set window and color
+;; Set window
 (tool-bar-mode 0)
+
+;; Set color
 (load-theme 'tango-dark t)
 
 ;; Set key-bind
