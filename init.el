@@ -13,6 +13,9 @@
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
 (el-get-bundle multi-term)
+(el-get-bundle helm)
+(el-get-bundle helm-projectile)
+(el-get-bundle helm-etags-plus)
 
 ;; Set window
 (tool-bar-mode 0)
