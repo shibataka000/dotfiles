@@ -23,11 +23,6 @@
 ;; Set color
 (load-theme 'tango-dark t)
 
-;; Set key-bind
-(define-key global-map "\C-x\C-b" 'electric-buffer-list)
-(define-key global-map "\C-cr" 'replace-string)
-(define-key global-map "\C-cp" 'markdown-preview)
-
 ;; About backup and auto-save
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -65,3 +60,13 @@
 ;; Shell
 (when (require 'multi-term nil t)
   (setq multi-term-program "/bin/bash"))
+
+;; Define key
+(define-key global-map (kbd "C-c C-r") 'replace-string)
+(define-key global-map (kbd "C-c C-p") 'markdown-preview)
+(define-key global-map (kbd "C-c C-l") 'cua-set-rectangle-mark)
+(define-key global-map (kbd "C-c C-f") 'helm-projectile)
+(define-key global-map (kbd "C-c C-t") 'helm-etags-select)
+(define-key global-map (kbd "C-c C-s") 'rgrep)
+(define-key global-map (kbd "C-t") 'other-window)
+(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
