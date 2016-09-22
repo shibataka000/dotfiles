@@ -48,6 +48,10 @@
       (if help (message "%s" help)))))
 (add-hook 'post-command-hook 'flymake-show-help)
 
+;; Cua
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+
 ;; Ctags
 (when (require 'ctags nil t)
   (setq tags-revert-without-query t)
