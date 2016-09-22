@@ -7,6 +7,7 @@
 
 ;; Install package
 (el-get-bundle auto-complete)
+(el-get-bundle ctags)
 (el-get-bundle markdown-mode)
 (el-get-bundle dockerfile-mode)
 (el-get-bundle yaml-mode)
@@ -46,3 +47,8 @@
     (let ((help (get-char-property (point) 'help-echo)))
       (if help (message "%s" help)))))
 (add-hook 'post-command-hook 'flymake-show-help)
+
+;; Ctags
+(when (require 'ctags nil t)
+  (setq tags-revert-without-query t)
+  (setq ctags-command "ctags -Re --fields=\"+afikKlmnsSzt\" "))
