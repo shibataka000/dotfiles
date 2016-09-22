@@ -31,6 +31,7 @@
       `((".*" ,temporary-file-directory t)))
 
 ;; Python
+(setq flymake-allowed-file-name-masks '())
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (when (load "flymake" t)
   (defun flymake-flake8-init ()
