@@ -1,4 +1,4 @@
-;; el-get
+;; El-get
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 (add-to-list 'load-path (locate-user-emacs-file "el-get"))
@@ -17,10 +17,8 @@
 (el-get-bundle helm-projectile)
 (el-get-bundle helm-etags-plus)
 
-;; Set window
+;; Decoration
 (tool-bar-mode 0)
-
-;; Set color
 (load-theme 'tango-dark t)
 
 ;; About backup and auto-save
