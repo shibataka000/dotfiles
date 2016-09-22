@@ -23,8 +23,11 @@
 (define-key global-map "\C-cr" 'replace-string)
 (define-key global-map "\C-cp" 'markdown-preview)
 
-;; Don't create backup file
-(setq make-backup-files nil)
+;; About backup and auto-save
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 ;; Python
 (add-hook 'find-file-hook 'flymake-find-file-hook)
