@@ -12,6 +12,7 @@
 (el-get-bundle dockerfile-mode)
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
+(el-get-bundle multi-term)
 
 ;; Set window
 (tool-bar-mode 0)
@@ -57,3 +58,7 @@
 (when (require 'ctags nil t)
   (setq tags-revert-without-query t)
   (setq ctags-command "ctags -Re --fields=\"+afikKlmnsSzt\" "))
+
+;; Shell
+(when (require 'multi-term nil t)
+  (setq multi-term-program "/bin/bash"))
