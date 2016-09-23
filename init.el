@@ -27,6 +27,15 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; Helm
+(when (and (require 'helm-projectile)
+	   (require 'helm-etags+))
+  (custom-set-variables
+   '(helm-mini-default-sources '(helm-source-buffers-list
+				 helm-source-recentf
+				 helm-source-projectile-files-list
+				 helm-source-etags-select))))
+
 ;; Python
 (setq flymake-allowed-file-name-masks '())
 (add-hook 'find-file-hook 'flymake-find-file-hook)
@@ -60,11 +69,10 @@
   (setq multi-term-program "/bin/bash"))
 
 ;; Define key
-(define-key global-map (kbd "C-c C-r") 'replace-string)
-(define-key global-map (kbd "C-c C-p") 'markdown-preview)
-(define-key global-map (kbd "C-c C-l") 'cua-set-rectangle-mark)
-(define-key global-map (kbd "C-c C-f") 'helm-projectile)
-(define-key global-map (kbd "C-c C-t") 'helm-etags-select)
-(define-key global-map (kbd "C-c C-s") 'rgrep)
+(define-key global-map (kbd "C-c r") 'replace-string)
+(define-key global-map (kbd "C-c p") 'markdown-preview)
+(define-key global-map (kbd "C-c l") 'cua-set-rectangle-mark)
+(define-key global-map (kbd "C-c h") 'helm-mini)
+(define-key global-map (kbd "C-c s") 'rgrep)
 (define-key global-map (kbd "C-t") 'other-window)
 (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
