@@ -1,6 +1,13 @@
 ;; Variables
 (setq github-user "")
 (setq github-pass "")
+(when (eq system-type 'windows-nt)
+  (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""
+	grep-program "\"C:/Program Files/Git/usr/bin/grep.exe\""
+	grip-program "\"C:/Python27/Scripts/grip.exe\""
+	))
+(when (eq system-type 'gnu/linux)
+  (setq grip-program "/usr/local/bin/grip"))
 
 ;; El-get
 (when load-file-name
@@ -80,7 +87,7 @@
   (when (get-process "grip")
     (kill-process "grip"))
   (sleep-for 0.5)
-  (start-process "grip" "*grip*" "grip" (format "--user=%s" github-user) (format "--pass=%s" github-pass) "--browser" buffer-file-name)
+  (start-process "grip" "*grip*" grip-program (format "--user=%s" github-user) (format "--pass=%s" github-pass) "--browser" buffer-file-name)
   (when (get-process "grip")
     (set-process-query-on-exit-flag (get-process "grip") nil))
   )
