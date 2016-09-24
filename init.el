@@ -1,3 +1,7 @@
+;; Variables
+(setq github-user "")
+(setq github-pass "")
+
 ;; El-get
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
@@ -68,9 +72,21 @@
 (when (require 'multi-term nil t)
   (setq multi-term-program "/bin/bash"))
 
+
+;; Markdown
+(defun my-markdown-preview ()
+  (interactive)
+  (when (get-process "grip")
+    (kill-process "grip"))
+  (sleep-for 0.5)
+  (start-process "grip" "*grip*" "grip" (format "--user=%s" github-user) (format "--pass=%s" github-pass) "--browser" buffer-file-name)
+  (when (get-process "grip")
+    (set-process-query-on-exit-flag (get-process "grip") nil))
+  )
+
 ;; Define key
 (define-key global-map (kbd "C-c r") 'replace-string)
-(define-key global-map (kbd "C-c p") 'markdown-preview)
+(define-key global-map (kbd "C-c p") 'my-markdown-preview)
 (define-key global-map (kbd "C-c l") 'cua-set-rectangle-mark)
 (define-key global-map (kbd "C-c h") 'helm-mini)
 (define-key global-map (kbd "C-c s") 'rgrep)
