@@ -1,6 +1,6 @@
-;; Variables
-(setq github-user "")
-(setq github-pass "")
+;; Settings
+(setq github-user ""
+      github-pass "")
 (when (eq system-type 'windows-nt)
   (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""
 	grep-program "\"C:/Program Files/Git/usr/bin/grep.exe\""
