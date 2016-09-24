@@ -81,7 +81,6 @@
   (interactive)
   (when (get-process "grip") (kill-process "grip"))
   (when (get-process "grip<1>") (kill-process "grip<1>"))
-  (sleep-for 0.5)
   (start-process "grip" "*grip*" grip-program (format "--user=%s" github-user) (format "--pass=%s" github-pass) "--browser" buffer-file-name)
   (when (get-process "grip") (set-process-query-on-exit-flag (get-process "grip") nil))
   (when (get-process "grip<1>") (set-process-query-on-exit-flag (get-process "grip<1>") nil))
