@@ -76,11 +76,6 @@
   (setq tags-revert-without-query t)
   (setq ctags-command "ctags -Re --fields=\"+afikKlmnsSzt\" "))
 
-;; Shell
-(when (require 'multi-term nil t)
-  (setq multi-term-program "/bin/bash"))
-
-
 ;; Markdown
 (defun my-markdown-preview ()
   (interactive)
