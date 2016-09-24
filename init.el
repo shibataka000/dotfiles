@@ -12,14 +12,15 @@
 ;; Install package
 (el-get-bundle auto-complete)
 (el-get-bundle ctags)
-(el-get-bundle markdown-mode)
-(el-get-bundle dockerfile-mode)
-(el-get-bundle yaml-mode)
-(el-get-bundle terraform-mode)
-(el-get-bundle multi-term)
 (el-get-bundle helm)
 (el-get-bundle helm-projectile)
 (el-get-bundle helm-etags-plus)
+(el-get-bundle markdown-mode)
+(el-get-bundle scala-mode)
+(el-get-bundle dockerfile-mode)
+(el-get-bundle powershell)
+(el-get-bundle yaml-mode)
+(el-get-bundle terraform-mode)
 
 ;; Decoration
 (tool-bar-mode 0)
