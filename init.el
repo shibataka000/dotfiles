@@ -92,3 +92,11 @@
 (define-key global-map (kbd "C-c s") 'rgrep)
 (define-key global-map (kbd "C-t") 'other-window)
 (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+
+;; Example config about indent
+;; (add-hook 'java-mode-hook
+;; 	  (lambda ()
+;; 	    (setq c-basic-offset 4)
+;; 	    (setq tab-width 4)
+;; 	    (setq indent-tabs-mode t)
+;; 	    ))
