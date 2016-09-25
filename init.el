@@ -5,9 +5,12 @@
   (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""
 	grep-program "\"C:/Program Files/Git/usr/bin/grep.exe\""
 	grip-program "\"C:/Python27/Scripts/grip.exe\""
+	grip-program "\"C:/Python27/Scripts/flake8.exe\""
 	))
 (when (eq system-type 'gnu/linux)
-  (setq grip-program "/usr/local/bin/grip"))
+  (setq grip-program "/usr/local/bin/grip"
+	flake8-program "/usr/local/bin/flake8"
+	))
 
 ;; El-get
 (when load-file-name
@@ -58,7 +61,7 @@
 	   (local-file (file-relative-name
 			temp-file
 			(file-name-directory buffer-file-name))))
-      (list "/usr/local/bin/flake8"  (list local-file))))
+      (list flake8-program (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
 	       '("\\.py\\'" flymake-flake8-init)))
 (defun flymake-show-help ()
