@@ -15,6 +15,8 @@ Nothing.
 - mercurial
 - el-get
 - grip
+- flake8
+- ctags
 
 ## keymap
 
