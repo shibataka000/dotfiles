@@ -95,8 +95,9 @@
 (define-key global-map (kbd "C-c l") 'cua-set-rectangle-mark)
 (define-key global-map (kbd "C-c h") 'helm-mini)
 (define-key global-map (kbd "C-c s") 'rgrep)
+(define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
 (define-key global-map (kbd "C-t") 'other-window)
-(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+(define-key global-map (kbd "<f5>") 'revert-buffer)
 
 ;; Example config about indent
 ;; (add-hook 'java-mode-hook
