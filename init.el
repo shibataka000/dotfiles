@@ -42,6 +42,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; Y-or-n
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; Helm
 (when (and (require 'helm-projectile)
 	   (require 'helm-etags+))
