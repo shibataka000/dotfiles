@@ -36,9 +36,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-;; Y-or-n
-(fset 'yes-or-no-p 'y-or-n-p)
-
 ;; Helm
 (when (and (require 'helm-projectile)
 	   (require 'helm-etags+))
@@ -67,10 +64,6 @@
       (if help (message "%s" help)))))
 (add-hook 'post-command-hook 'flymake-show-help)
 
-;; Cua
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-
 ;; Ctags
 (when (require 'ctags nil t)
   (setq tags-revert-without-query t)
@@ -89,17 +82,8 @@
 ;; Define key
 (define-key global-map (kbd "C-c r") 'replace-string)
 (define-key global-map (kbd "C-c p") 'my-markdown-preview)
-(define-key global-map (kbd "C-c l") 'cua-set-rectangle-mark)
 (define-key global-map (kbd "C-c h") 'helm-mini)
 (define-key global-map (kbd "C-c s") 'rgrep)
 (define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
 (define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "<f5>") 'revert-buffer)
-
-;; Example config about indent
-;; (add-hook 'java-mode-hook
-;; 	  (lambda ()
-;; 	    (setq c-basic-offset 4)
-;; 	    (setq tab-width 4)
-;; 	    (setq indent-tabs-mode t)
-;; 	    ))
