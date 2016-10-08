@@ -1,12 +1,6 @@
 ;; Settings
 (setq github-user ""
       github-pass "")
-(when (eq system-type 'windows-nt)
-  (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""
-	grep-program "\"C:/Program Files/Git/usr/bin/grep.exe\""
-	grip-program "\"C:/Python27/Scripts/grip.exe\""
-	grip-program "\"C:/Python27/Scripts/flake8.exe\""
-	))
 (when (eq system-type 'gnu/linux)
   (setq grip-program "/usr/local/bin/grip"
 	flake8-program "/usr/local/bin/flake8"
