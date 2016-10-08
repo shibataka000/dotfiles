@@ -3,8 +3,7 @@
       github-pass "")
 (when (eq system-type 'gnu/linux)
   (setq grip-program "/usr/local/bin/grip"
-	flake8-program "/usr/local/bin/flake8"
-	))
+	flake8-program "/usr/local/bin/flake8"))
 
 ;; El-get
 (when load-file-name
