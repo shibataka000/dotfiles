@@ -78,6 +78,25 @@
   (when (get-process "grip<1>") (set-process-query-on-exit-flag (get-process "grip<1>") nil))
   )
 
+;; Org-mode
+(require 'ox-latex)
+(setq org-latex-with-hyperref nil)
+(setq org-latex-default-class "jsarticle")
+(setq org-latex-pdf-process
+      '("platex %f"
+	"platex %f"
+	"xdvipdfmx %b.dvi"))
+(add-to-list 'org-latex-classes
+	     '("jsarticle"
+	       "\\documentclass[11pt,a4paper]{jsarticle}
+                [NO-PACKAGES]
+                [NO-DEFAULT-PACKAGES]"
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 ;; Define key
 (define-key global-map (kbd "C-c r") 'replace-string)
 (define-key global-map (kbd "C-c p") 'my-markdown-preview)
