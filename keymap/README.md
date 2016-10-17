@@ -8,8 +8,8 @@ Set following key config.
 
 ```
 ln -s dotfiles/keymap/xkb ~/.xkb
-ln -s dotfiles/keymap/myxkbdomp.sh ~/bin/myxkbcomp.sh
-ln -s dotfiles/keymap/myxkbcomp.sh.desktop ~/.config/autostart/myxkbcomp.sh.desktop
+ln -s dotfiles/keymap/xkbdomp.sh ~/bin/xkbcomp.sh
+ln -s dotfiles/keymap/xkbcomp.sh.desktop ~/.config/autostart/xkbcomp.sh.desktop
 ```
 
 ## Author

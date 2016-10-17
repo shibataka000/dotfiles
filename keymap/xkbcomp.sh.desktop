@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/takao/bin/myxkbcomp.sh
+Exec=/home/takao/bin/xkbcomp.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
