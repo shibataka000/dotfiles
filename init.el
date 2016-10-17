@@ -39,10 +39,11 @@
 (when (and (require 'helm-projectile)
 	   (require 'helm-etags+))
   (custom-set-variables
-   '(helm-mini-default-sources '(helm-source-buffers-list
-				 helm-source-recentf
+   '(helm-mini-default-sources '(helm-source-etags-select
 				 helm-source-projectile-files-list
-				 helm-source-etags-select))))
+				 helm-source-recentf
+				 helm-source-buffers-list
+				 ))))
 
 ;; Python
 (setq flymake-allowed-file-name-masks '())
