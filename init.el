@@ -3,7 +3,8 @@
       github-pass "")
 (when (eq system-type 'gnu/linux)
   (setq grip-program "/usr/local/bin/grip"
-	flake8-program "/usr/local/bin/flake8"))
+	flake8-program "/usr/local/bin/flake8"
+	terminal-program "/bin/bash"))
 
 ;; El-get
 (when load-file-name
@@ -101,7 +102,7 @@
 
 ;; Multi-term
 (when (require 'multi-term nil t)
-  (setq multi-term-program "/bin/bash"))
+  (setq multi-term-program terminal-program))
 (add-to-list 'term-unbind-key-list '"C-o")  ; helm-mini
 (add-to-list 'term-unbind-key-list '"C-t")  ; other-window
 
