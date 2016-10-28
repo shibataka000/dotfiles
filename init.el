@@ -100,9 +100,9 @@
   )
 
 ;; Define key
-(define-key global-map (kbd "C-t") 'helm-mini)
+(define-key global-map (kbd "C-o") 'helm-mini)
+(define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "C-c r") 'replace-string)
 (define-key global-map (kbd "C-c p") 'my-markdown-preview)
-(define-key global-map (kbd "C-c s") 'rgrep)
 (define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
 (define-key global-map (kbd "<f5>") 'revert-buffer)
