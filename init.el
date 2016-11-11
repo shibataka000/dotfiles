@@ -3,8 +3,7 @@
       github-pass "")
 (when (eq system-type 'gnu/linux)
   (setq grip-program "/usr/local/bin/grip"
-	flake8-program "/usr/local/bin/flake8"
-	terminal-program "/bin/bash"))
+	flake8-program "/usr/local/bin/flake8"))
 
 ;; El-get
 (when load-file-name
@@ -25,7 +24,6 @@
 (el-get-bundle powershell)
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
-(el-get-bundle multi-term)
 
 ;; Decoration
 (tool-bar-mode 0)
@@ -99,12 +97,6 @@
 	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   )
-
-;; Multi-term
-(when (require 'multi-term nil t)
-  (setq multi-term-program terminal-program))
-(add-to-list 'term-unbind-key-list '"C-o")  ; helm-mini
-(add-to-list 'term-unbind-key-list '"C-t")  ; other-window
 
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
