@@ -24,6 +24,7 @@
 (el-get-bundle powershell)
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
+(el-get-bundle go-mode)
 
 ;; Decoration
 (tool-bar-mode 0)
