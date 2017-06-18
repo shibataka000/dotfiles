@@ -99,6 +99,15 @@
 	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   )
 
+
+;; Go
+(add-hook 'go-mode-hook
+	  (lambda ()
+	    (setq c-basic-offset 4)
+	    (setq tab-width 4)
+	    (setq indent-tabs-mode t)
+	    ))
+
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
