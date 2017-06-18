@@ -79,7 +79,7 @@
   (when (get-process "grip<1>") (set-process-query-on-exit-flag (get-process "grip<1>") nil))
   )
 
-;; Org-mode
+;; Org
 (when (require 'ox-latex nil t)
   (setq org-latex-with-hyperref nil)
   (setq org-latex-default-class "jsarticle")
