@@ -2,6 +2,9 @@
 alias emacs="emacs -nw"
 alias ll="ls -l"
 
+# scripts
+export PATH="$HOME/src/scripts:$PATH"
+
 # pyenv, pyenv-virtualenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
