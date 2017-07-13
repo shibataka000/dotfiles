@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/local/bin/xkbcomp.sh
+Exec=/home/takao/.xkb/xkbcomp.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
 Name[ja]=myxkbcomp
-Name=/usr/local/bin/xkbcomp.sh
+Name=myxkbcomp
 Comment[ja]=
 Comment=
