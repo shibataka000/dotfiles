@@ -9,8 +9,3 @@ export PATH="$HOME/src/scripts:$PATH"
 export GOPATH="$HOME/src/golang"
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-
-# keymap
-if [ -e ~/.xkb/xkbcomp.sh ]; then
-    sh ~/.xkb/xkbcomp.sh
-fi
