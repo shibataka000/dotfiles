@@ -36,6 +36,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; Tab
+(setq-default tab-width 4 indent-tabs-mode nil)
+
 ;; Helm
 (when (and (require 'helm-projectile)
 	   (require 'helm-etags+))
