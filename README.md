@@ -9,11 +9,11 @@ DOTFILES=/path/to/dotfiles
 echo ". $DOTFILES/.bashrc" >> $HOME/.bashrc
 
 # emacs
-ln -s $DOTFILES/init.el $HOME/.emacs.d/init.el
+ln -s $DOTFILES/.emacs.d/init.el $HOME/.emacs.d/init.el
 
 # xkbcomp
-ln -s $DOTFILES/xkb $HOME/.xkb
-ln -s $DOTFILES/xkbcomp.sh.desktop $HOME/.config/autostart/xkbcomp.sh.desktop
+ln -s $DOTFILES/.xkb $HOME/.xkb
+ln -s $HOME/.xkb/xkbcomp.sh.desktop $HOME/.config/autostart/xkbcomp.sh.desktop
 echo ". $HOME/.xkb/xkbcomp.sh" >> $HOME/.bashrc
 ```
 
