@@ -1,6 +1,6 @@
 ;; Settings
-(setq github-user "shibataka000"
-      github-pass "lsongit0")
+(setq github-user ""
+      github-pass "")
 (when (eq system-type 'gnu/linux)
   (setq grip-program "/usr/local/bin/grip"
 	flake8-program "/usr/local/bin/flake8"))
