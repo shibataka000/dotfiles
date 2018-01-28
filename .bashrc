@@ -6,6 +6,6 @@ alias ll="ls -l"
 export PATH="$HOME/src/scripts:$PATH"
 
 # golang
-export GOPATH="$HOME/src/golang"
+export GOPATH="$HOME/go"
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
