@@ -2,8 +2,7 @@
 (setq github-user ""
       github-pass "")
 (when (eq system-type 'gnu/linux)
-  (setq grip-program "/usr/local/bin/grip"
-	flake8-program "/usr/local/bin/flake8"))
+  (setq grip-program "/usr/local/bin/grip"))
 
 ;; El-get
 (when load-file-name
@@ -18,6 +17,7 @@
 (el-get-bundle helm)
 (el-get-bundle helm-projectile)
 (el-get-bundle helm-etags-plus)
+(el-get-bundle flycheck)
 (el-get-bundle markdown-mode)
 (el-get-bundle scala-mode)
 (el-get-bundle dockerfile-mode)
@@ -49,23 +49,7 @@
 				 helm-source-recentf))))
 
 ;; Python
-(setq flymake-allowed-file-name-masks '())
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-(when (load "flymake" t)
-  (defun flymake-flake8-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-	   (local-file (file-relative-name
-			temp-file
-			(file-name-directory buffer-file-name))))
-      (list flake8-program (list local-file))))
-  (add-to-list 'flymake-allowed-file-name-masks
-	       '("\\.py\\'" flymake-flake8-init)))
-(defun flymake-show-help ()
-  (when (get-char-property (point) 'flymake-overlay)
-    (let ((help (get-char-property (point) 'help-echo)))
-      (if help (message "%s" help)))))
-(add-hook 'post-command-hook 'flymake-show-help)
+(add-hook 'python-mode-hook 'flycheck-mode)
 
 ;; Ctags
 (when (require 'ctags nil t)
