@@ -41,12 +41,12 @@
 
 ;; Helm
 (when (and (require 'helm-projectile)
-	   (require 'helm-etags+))
+           (require 'helm-etags+))
   (custom-set-variables
    '(helm-mini-default-sources '(helm-source-buffers-list
-				 helm-source-projectile-files-list
-				 helm-source-etags-select
-				 helm-source-recentf))))
+                                 helm-source-projectile-files-list
+                                 helm-source-etags-select
+                                 helm-source-recentf))))
 
 ;; Python
 (add-hook 'python-mode-hook 'flycheck-mode)
@@ -71,29 +71,29 @@
   (setq org-latex-with-hyperref nil)
   (setq org-latex-default-class "jsarticle")
   (setq org-latex-pdf-process
-	'("platex %f"
-	  "platex %f"
-	  "xdvipdfmx %b.dvi"))
+        '("platex %f"
+          "platex %f"
+          "xdvipdfmx %b.dvi"))
   (add-to-list 'org-latex-classes
-	     '("jsarticle"
-	       "\\documentclass[11pt,a4paper]{jsarticle}
+               '("jsarticle"
+                 "\\documentclass[11pt,a4paper]{jsarticle}
                 [NO-PACKAGES]
                 [NO-DEFAULT-PACKAGES]"
-	       ("\\section{%s}" . "\\section*{%s}")
-	       ("\\subsection{%s}" . "\\subsection*{%s}")
-	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
-	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   )
 
 
 ;; Go
 (add-hook 'go-mode-hook
-	  (lambda ()
-	    (setq c-basic-offset 4)
-	    (setq tab-width 4)
-	    (setq indent-tabs-mode t)
-	    ))
+          (lambda ()
+            (setq c-basic-offset 4)
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)
+            ))
 
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
