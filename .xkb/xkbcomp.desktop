@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=xkbcomp
+Comment=Swap Ctrl and Caps
+Type=Application
+Exec=/home/takao/.xkb/xkbcomp.sh

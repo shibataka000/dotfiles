@@ -13,7 +13,7 @@ ln -s $DOTFILES/.emacs.d/init.el $HOME/.emacs.d/init.el
 
 # xkbcomp
 ln -s $DOTFILES/.xkb $HOME/.xkb
-ln -s $HOME/.xkb/xkbcomp.sh.desktop $HOME/.config/autostart/xkbcomp.sh.desktop
+ln -s $HOME/.xkb/xkbcomp.desktop $HOME/.config/autostart/xkbcomp.desktop
 echo ". $HOME/.xkb/xkbcomp.sh" >> $HOME/.bashrc
 ```
 
