@@ -1,3 +1,9 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 ;; Settings
 (setq github-user ""
       github-pass "")
@@ -41,7 +47,7 @@
 
 ;; Helm
 (when (and (require 'helm-projectile)
-           (require 'helm-etags+))
+           (require 'helm-etags-plus))
   (custom-set-variables
    '(helm-mini-default-sources '(helm-source-buffers-list
                                  helm-source-projectile-files-list
