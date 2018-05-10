@@ -8,7 +8,7 @@
 (setq github-user ""
       github-pass "")
 (when (eq system-type 'gnu/linux)
-  (setq grip-program "/usr/local/bin/grip"))
+  (setq grip-program "~/.local/bin/grip"))
 
 ;; El-get
 (when load-file-name
