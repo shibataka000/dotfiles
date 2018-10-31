@@ -28,6 +28,7 @@
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
 (el-get-bundle go-mode)
+(el-get-bundle adoc-mode)
 
 ;; Decoration
 (tool-bar-mode 0)
@@ -97,6 +98,10 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)
             ))
+
+;; Asciidoc
+(add-to-list 'auto-mode-alist '("\\.asc\\'" . adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc\\'" . adoc-mode))
 
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
