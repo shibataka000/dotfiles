@@ -103,6 +103,9 @@
 (add-to-list 'auto-mode-alist '("\\.asc\\'" . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.adoc\\'" . adoc-mode))
 
+;; *.env
+(add-to-list 'auto-mode-alist '("\\.env\\'" . shell-script-mode))
+
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
