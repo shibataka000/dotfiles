@@ -102,6 +102,17 @@
 ;; Asciidoc
 (add-to-list 'auto-mode-alist '("\\.asc\\'" . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.adoc\\'" . adoc-mode))
+(add-hook 'adoc-mode-hook
+          (lambda ()
+            (custom-set-faces
+             '(markup-complex-replacement-face ((t (:inherit markup-meta-face :foreground "plum1" :box (:line-width 2 :style released-button)))))
+             '(markup-list-face ((t (:inherit markup-meta-face :foreground "plum1"))))
+             '(markup-meta-face ((t (:stipple nil :foreground "color-248" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil
+                                              :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Monospace"))))
+             '(markup-meta-hide-face ((t (:inherit markup-meta-face :height 0.8))))
+             '(markup-table-face ((t (:inherit markup-meta-face :foreground "dodger blue"))))
+             '(markup-verbatim-face ((t nil))))
+            ))
 
 ;; *.env
 (add-to-list 'auto-mode-alist '("\\.env\\'" . shell-script-mode))
