@@ -14,3 +14,6 @@ ARM_CREDENTIALS=$HOME/.azure/credentials
 if [ -e $ARM_CREDENTIALS ]; then
     . $ARM_CREDENTIALS
 fi
+
+# gcp
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
