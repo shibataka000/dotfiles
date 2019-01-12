@@ -63,7 +63,7 @@
   (setq ctags-command "ctags -Re --fields=\"+afikKlmnsSzt\" "))
 
 ;; Markdown
-(defun my-markdown-preview ()
+(defun markdown-grip-preview ()
   (interactive)
   (when (get-process "grip") (kill-process "grip"))
   (when (get-process "grip<1>") (kill-process "grip<1>"))
@@ -133,7 +133,7 @@
 (define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "C-c r") 'replace-string)
-(define-key global-map (kbd "C-c p") 'my-markdown-preview)
+(define-key global-map (kbd "C-c p") 'markdown-grip-preview)
 (define-key global-map (kbd "C-c m") 'markdown-marp-preview)
 (define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
 (define-key global-map (kbd "<f5>") 'revert-buffer)
