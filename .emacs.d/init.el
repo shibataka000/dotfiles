@@ -5,7 +5,9 @@
 (setq github-user ""
       github-pass "")
 (when (eq system-type 'gnu/linux)
-  (setq grip-program "~/.local/bin/grip"))
+  (setq grip-program "~/.local/bin/grip")
+  (setq marp-program "/usr/local/bin/marp")
+  )
 
 ;; El-get
 (when load-file-name
@@ -68,6 +70,16 @@
   (start-process "grip" "*grip*" grip-program (format "--user=%s" github-user) (format "--pass=%s" github-pass) "--browser" buffer-file-name)
   (when (get-process "grip") (set-process-query-on-exit-flag (get-process "grip") nil))
   (when (get-process "grip<1>") (set-process-query-on-exit-flag (get-process "grip<1>") nil))
+  (message "Start grip")
+  )
+(defun markdown-marp-preview ()
+  (interactive)
+  (when (get-process "marp") (kill-process "marp"))
+  (when (get-process "marp<1>") (kill-process "marp<1>"))
+  (start-process "marp" "*marp*" marp-program "--watch" "--allow-local-files" (format "--theme-set=%s" (file-name-directory buffer-file-name)) "--" buffer-file-name)
+  (when (get-process "marp") (set-process-query-on-exit-flag (get-process "marp") nil))
+  (when (get-process "marp<1>") (set-process-query-on-exit-flag (get-process "marp<1>") nil))
+  (message "Start marp")
   )
 
 ;; Org
@@ -122,5 +134,6 @@
 (define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "C-c r") 'replace-string)
 (define-key global-map (kbd "C-c p") 'my-markdown-preview)
+(define-key global-map (kbd "C-c m") 'markdown-marp-preview)
 (define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
 (define-key global-map (kbd "<f5>") 'revert-buffer)
