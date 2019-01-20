@@ -24,7 +24,6 @@
 (el-get-bundle helm-etags-plus)
 (el-get-bundle flycheck)
 (el-get-bundle markdown-mode)
-(el-get-bundle scala-mode)
 (el-get-bundle dockerfile-mode)
 (el-get-bundle powershell)
 (el-get-bundle yaml-mode)
@@ -81,27 +80,6 @@
   (when (get-process "marp<1>") (set-process-query-on-exit-flag (get-process "marp<1>") nil))
   (message "Start marp")
   )
-
-;; Org
-(when (require 'ox-latex nil t)
-  (setq org-latex-with-hyperref nil)
-  (setq org-latex-default-class "jsarticle")
-  (setq org-latex-pdf-process
-        '("platex %f"
-          "platex %f"
-          "xdvipdfmx %b.dvi"))
-  (add-to-list 'org-latex-classes
-               '("jsarticle"
-                 "\\documentclass[11pt,a4paper]{jsarticle}
-                [NO-PACKAGES]
-                [NO-DEFAULT-PACKAGES]"
-                 ("\\section{%s}" . "\\section*{%s}")
-                 ("\\subsection{%s}" . "\\subsection*{%s}")
-                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
-                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-  )
-
 
 ;; Go
 (add-hook 'go-mode-hook
