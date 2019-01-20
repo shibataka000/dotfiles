@@ -1,6 +1,7 @@
 # general
 alias emacs="emacs -nw"
 alias ll="ls -l"
+alias k="kubectl"
 
 # golang
 export GOPATH="$HOME/go"
