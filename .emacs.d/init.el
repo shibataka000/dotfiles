@@ -7,6 +7,7 @@
 (when (eq system-type 'gnu/linux)
   (setq grip-program "~/.local/bin/grip")
   (setq marp-program "/usr/local/bin/marp")
+  (setq google-chrome-program "/usr/bin/google-chrome")
   )
 
 ;; El-get
@@ -75,10 +76,12 @@
   (interactive)
   (when (get-process "marp") (kill-process "marp"))
   (when (get-process "marp<1>") (kill-process "marp<1>"))
-  (start-process "marp" "*marp*" marp-program "--watch" "--allow-local-files" (format "--theme-set=%s" (file-name-directory buffer-file-name)) "--" buffer-file-name)
+  (start-process "marp" "*marp*" marp-program "--server" (file-name-directory buffer-file-name))
   (when (get-process "marp") (set-process-query-on-exit-flag (get-process "marp") nil))
   (when (get-process "marp<1>") (set-process-query-on-exit-flag (get-process "marp<1>") nil))
   (message "Start marp")
+  (sleep-for 1)
+  (start-process "google-chrome" "*google-chrome*" google-chrome-program "http://localhost:8080")
   )
 
 ;; Go
