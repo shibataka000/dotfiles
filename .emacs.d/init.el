@@ -107,9 +107,6 @@
              '(markup-verbatim-face ((t nil))))
             ))
 
-;; *.env
-(add-to-list 'auto-mode-alist '("\\.env\\'" . shell-script-mode))
-
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
