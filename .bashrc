@@ -21,3 +21,6 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
 
 # k8s
 source <(kubectl completion bash)
+
+# terraform
+complete -C /usr/local/bin/terraform terraform
