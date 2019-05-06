@@ -91,6 +91,18 @@
             (setq indent-tabs-mode t)
             ))
 
+;; Terminal
+(defun bash ()
+  (interactive)
+  (term "/bin/bash")
+  )
+(add-hook 'term-mode-hook
+          (lambda ()
+            (term-set-escape-char ?\C-x)
+            (define-key term-raw-map "\C-o" 'helm-mini)
+            (define-key term-raw-map "\C-t" 'other-window)
+            ))
+
 ;; Define key
 (define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
