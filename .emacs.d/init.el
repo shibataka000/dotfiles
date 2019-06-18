@@ -30,6 +30,7 @@
 (el-get-bundle yaml-mode)
 (el-get-bundle terraform-mode)
 (el-get-bundle go-mode)
+(el-get-bundle protobuf-mode)
 
 ;; Decoration
 (tool-bar-mode 0)
