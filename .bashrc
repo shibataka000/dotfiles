@@ -8,6 +8,7 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
 # python
 export PATH="$HOME/.local/bin:$PATH"
+export PIPENV_VENV_IN_PROJECT="true"
 
 # azure
 ARM_CREDENTIALS=$HOME/.azure/credentials
