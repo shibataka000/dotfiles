@@ -24,8 +24,9 @@ fi
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
 
 # k8s
-source <(kubectl completion bash)
 alias k=kubectl
+alias kc=kubectx
+source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 source $DOTFILES/kube-ps1.sh
 export PS1='$(kube_ps1)'$PS1
