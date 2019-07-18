@@ -1,10 +1,7 @@
 # general
 DOTFILES=$HOME/.dotfiles
 alias ll="ls -l"
-
-# emacs
 alias emacs="emacs -nw"
-alias e="emacs"
 
 # golang
 export GOPATH="$HOME/go"
