@@ -49,8 +49,9 @@
 (when (and (require 'helm-projectile)
            (require 'helm-etags-plus))
   (custom-set-variables
-   '(helm-mini-default-sources '(helm-source-buffers-list
+   '(helm-mini-default-sources '(
                                  helm-source-recentf
+                                 helm-source-buffers-list
                                  helm-source-projectile-files-list
                                  helm-source-etags-select
                                  ))))
