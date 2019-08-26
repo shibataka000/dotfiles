@@ -1,0 +1,12 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "git.autofetch": false,
+    "git.ignoreMissingGitWarning": true,
+    "files.defaultLanguage": "markdown",
+    "files.autoGuessEncoding": true,
+    "breadcrumbs.enabled": false,
+    "editor.copyWithSyntaxHighlighting": false
+}
