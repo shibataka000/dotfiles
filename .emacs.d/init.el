@@ -36,6 +36,10 @@
 (tool-bar-mode 0)
 (load-theme 'tango-dark t)
 
+;; Mode line
+(line-number-mode t)
+(column-number-mode t)
+
 ;; About backup and auto-save
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
