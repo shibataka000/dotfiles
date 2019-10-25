@@ -91,6 +91,7 @@
   )
 
 ;; Go
+(add-to-list 'auto-mode-alist '("go.mod" . go-mode))
 (add-hook 'go-mode-hook
           (lambda ()
             (setq c-basic-offset 4)
