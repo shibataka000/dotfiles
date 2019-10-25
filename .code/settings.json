@@ -8,5 +8,9 @@
     "files.defaultLanguage": "markdown",
     "files.autoGuessEncoding": true,
     "breadcrumbs.enabled": false,
-    "editor.copyWithSyntaxHighlighting": false
+    "editor.copyWithSyntaxHighlighting": false,
+    "files.watcherExclude": {
+        "**/.git/**": true,
+        "**/.terraform/**": true
+    }
 }
