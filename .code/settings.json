@@ -11,6 +11,21 @@
     "editor.copyWithSyntaxHighlighting": false,
     "files.watcherExclude": {
         "**/.git/**": true,
-        "**/.terraform/**": true
-    }
+        "**/.terraform/**": true,
+    },
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
 }
