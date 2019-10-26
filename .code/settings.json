@@ -23,9 +23,7 @@
         ]
     },
     "terraform.languageServer": {
-        "enabled": true,
+        "enabled": false,
         "args": []
-    },
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
+    }
 }
