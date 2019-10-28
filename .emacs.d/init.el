@@ -91,7 +91,6 @@
   )
 
 ;; Go
-(add-to-list 'auto-mode-alist '("go.mod" . go-mode))
 (add-hook 'go-mode-hook
           (lambda ()
             (setq c-basic-offset 4)
@@ -117,11 +116,11 @@
   (mapc 'kill-buffer (buffer-list)))
 
 ;; Define key
-(define-key global-map (kbd "C-p") 'helm-mini)
+(define-key global-map (kbd "C-o") 'helm-mini)
 (define-key global-map (kbd "C-t") 'other-window)
-(define-key global-map (kbd "C-c C-r") 'replace-string)
-(define-key global-map (kbd "C-c C-p") 'markdown-grip-preview)
-(define-key global-map (kbd "C-c C-m") 'markdown-marp-preview)
-(define-key global-map (kbd "C-c C-t") 'ctags-create-or-update-tags-table)
-(define-key global-map (kbd "C-c C-k") 'kill-all-buffers)
+(define-key global-map (kbd "C-c r") 'replace-string)
+(define-key global-map (kbd "C-c p") 'markdown-grip-preview)
+(define-key global-map (kbd "C-c m") 'markdown-marp-preview)
+(define-key global-map (kbd "C-c t") 'ctags-create-or-update-tags-table)
+(define-key global-map (kbd "C-c k") 'kill-all-buffers)
 (define-key global-map (kbd "<f5>") 'revert-buffer)
