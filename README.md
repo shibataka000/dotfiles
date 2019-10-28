@@ -13,6 +13,7 @@ ln -s $DOTFILES/.emacs.d/init.el $HOME/.emacs.d/init.el
 
 # vscode
 ln -s $DOTFILES/.code/settings.json $HOME/.config/Code/User/settings.json
+ln -s $DOTFILES/.code/keybindings.json $HOME/.config/Code/User/keybindings.json
 ```
 
 ## Author
