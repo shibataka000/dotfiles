@@ -10,12 +10,10 @@
     },
     {
         "key": "ctrl+shift+down",
-        "command": "workbench.action.terminal.scrollDown",
-        "when": "terminalFocus"
+        "command": "cursorColumnSelectDown"
     },
     {
         "key": "ctrl+shift+up",
-        "command": "workbench.action.terminal.scrollUp",
-        "when": "terminalFocus"
+        "command": "cursorColumnSelectUp"
     }
 ]
