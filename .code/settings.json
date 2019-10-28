@@ -11,7 +11,7 @@
     "editor.copyWithSyntaxHighlighting": false,
     "files.watcherExclude": {
         "**/.git/**": true,
-        "**/.terraform/**": true,
+        "**/.terraform/**": true
     },
     "terraform.indexing": {
         "enabled": false,
