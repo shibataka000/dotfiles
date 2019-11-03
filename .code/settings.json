@@ -25,5 +25,7 @@
     "terraform.languageServer": {
         "enabled": false,
         "args": []
-    }
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
 }
