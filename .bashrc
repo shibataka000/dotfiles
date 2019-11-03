@@ -29,8 +29,6 @@ alias kc=kubectx
 alias kn=kubens
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
-source $DOTFILES/kube-ps1.sh
-export PS1='$(kube_ps1)'$PS1
 
 # terraform
 complete -C /usr/local/bin/terraform terraform
