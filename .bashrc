@@ -27,8 +27,10 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
 alias k=kubectl
 alias kc=kubectx
 alias kn=kubens
+alias kw="watch kubectl"
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+complete -o default -F __start_kubectl kw
 
 # terraform
 complete -C /usr/local/bin/terraform terraform
