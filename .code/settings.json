@@ -26,6 +26,6 @@
         "enabled": false,
         "args": []
     },
-    "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": false,
     "files.insertFinalNewline": true
 }
