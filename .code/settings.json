@@ -13,6 +13,8 @@
         "**/.git/**": true,
         "**/.terraform/**": true
     },
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
     "terraform.indexing": {
         "enabled": false,
         "liveIndexing": false,
@@ -26,6 +28,5 @@
         "enabled": false,
         "args": []
     },
-    "files.trimTrailingWhitespace": false,
-    "files.insertFinalNewline": true
+    "go.useLanguageServer": true
 }
