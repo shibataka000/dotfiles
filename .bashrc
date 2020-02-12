@@ -14,6 +14,9 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT="true"
 
+# aws
+complete -C aws_completer aws
+
 # azure
 ARM_CREDENTIALS=$HOME/.azure/credentials
 if [ -e $ARM_CREDENTIALS ]; then
