@@ -9,6 +9,8 @@ alias e="emacs"
 # golang
 export GOPATH="$HOME/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
+export GOOS="linux"
+export GOARCH="amd64"
 
 # python
 export PATH="$HOME/.local/bin:$PATH"
