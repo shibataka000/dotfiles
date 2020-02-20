@@ -38,4 +38,4 @@ complete -o default -F __start_kubectl k
 complete -o default -F __start_kubectl kw
 
 # terraform
-complete -C /usr/local/bin/terraform terraform
+complete -C terraform terraform
