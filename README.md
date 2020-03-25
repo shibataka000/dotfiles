@@ -11,6 +11,9 @@ echo ". $DOTFILES/.bashrc" >> $HOME/.bashrc
 # emacs
 ln -s $DOTFILES/.emacs.d/init.el $HOME/.emacs.d/init.el
 
+# vim
+ln -s $DOTFILES/.vimrc $HOME/.vimrc
+
 # tmux
 ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
