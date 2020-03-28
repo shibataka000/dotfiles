@@ -39,3 +39,6 @@ complete -o default -F __start_kubectl kw
 
 # terraform
 complete -C terraform terraform
+
+# kind
+source <(kind completion bash)
