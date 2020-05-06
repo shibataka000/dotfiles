@@ -28,5 +28,6 @@
         "enabled": false,
         "args": []
     },
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "window.titleBarStyle": "custom"
 }
