@@ -1,5 +1,4 @@
 # general
-DOTFILES=$HOME/.dotfiles
 alias ll="ls -l"
 
 # emacs
@@ -41,4 +40,6 @@ complete -o default -F __start_kubectl kw
 complete -C terraform terraform
 
 # kind
-source <(kind completion bash)
+if [ $(which kind) ]; then
+    source <(kind completion bash)
+fi
