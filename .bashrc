@@ -16,7 +16,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # aws
-complete -C aws_completer aws
+if [ $(which aws) ]; then
+    complete -C aws_completer aws
+fi
 
 # azure
 ARM_CREDENTIALS=$HOME/.azure/credentials
@@ -32,12 +34,16 @@ alias k=kubectl
 alias kc=kubectx
 alias kn=kubens
 alias kw="watch kubectl"
-source <(kubectl completion bash)
-complete -o default -F __start_kubectl k
-complete -o default -F __start_kubectl kw
+if [ $(which kubectl) ]; then
+    source <(kubectl completion bash)
+    complete -o default -F __start_kubectl k
+    complete -o default -F __start_kubectl kw
+fi
 
 # terraform
-complete -C terraform terraform
+if [ $(which terraform) ]; then
+    complete -C terraform terraform
+fi
 
 # kind
 if [ $(which kind) ]; then
