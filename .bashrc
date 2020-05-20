@@ -49,3 +49,6 @@ fi
 if [ $(which kind) ]; then
     source <(kind completion bash)
 fi
+
+# kustomize
+export XDG_CONFIG_HOME=$HOME/.config
