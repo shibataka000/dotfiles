@@ -1,4 +1,5 @@
 # general
+export DOTFILES="$HOME/.dotfiles"
 alias ll="ls -l"
 
 # emacs
@@ -39,6 +40,13 @@ if [ $(which kubectl) ]; then
     complete -o default -F __start_kubectl k
     complete -o default -F __start_kubectl kw
 fi
+
+# kube-ps1
+. $DOTFILES/.kube-ps1/kube-ps1.sh
+export PS1='$(kube_ps1)'$PS1
+export KUBE_PS1_SYMBOL_ENABLE=false
+export KUBE_PS1_CTX_COLOR=85
+export KUBE_PS1_NS_COLOR=75
 
 # terraform
 if [ $(which terraform) ]; then
