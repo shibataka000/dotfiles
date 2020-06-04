@@ -59,4 +59,5 @@ if [ $(which kind) ]; then
 fi
 
 # kustomize
+complete -C kustomize kustomize
 export XDG_CONFIG_HOME=$HOME/.config
