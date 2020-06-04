@@ -30,16 +30,23 @@ fi
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
 
-# k8s
+# terraform
+if [ $(which terraform) ]; then
+    complete -C terraform terraform
+fi
+
+# kubectl
 alias k=kubectl
-alias kc=kubectx
-alias kn=kubens
 alias kw="watch kubectl"
 if [ $(which kubectl) ]; then
     source <(kubectl completion bash)
     complete -o default -F __start_kubectl k
     complete -o default -F __start_kubectl kw
 fi
+
+# kubectx, kubens
+alias kc=kubectx
+alias kn=kubens
 
 # kube-ps1
 . $DOTFILES/.kube-ps1/kube-ps1.sh
@@ -48,16 +55,13 @@ export KUBE_PS1_SYMBOL_ENABLE=false
 export KUBE_PS1_CTX_COLOR=75
 export KUBE_PS1_NS_COLOR=75
 
-# terraform
-if [ $(which terraform) ]; then
-    complete -C terraform terraform
+# kustomize
+export XDG_CONFIG_HOME=$HOME/.config
+if [ $(which kustomize) ]; then
+    complete -C kustomize kustomize
 fi
 
 # kind
 if [ $(which kind) ]; then
     source <(kind completion bash)
 fi
-
-# kustomize
-complete -C kustomize kustomize
-export XDG_CONFIG_HOME=$HOME/.config
