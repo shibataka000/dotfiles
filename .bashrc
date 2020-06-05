@@ -57,9 +57,6 @@ export KUBE_PS1_NS_COLOR=75
 
 # kustomize
 export XDG_CONFIG_HOME=$HOME/.config
-if [ $(which kustomize) ]; then
-    complete -C kustomize kustomize
-fi
 
 # kind
 if [ $(which kind) ]; then
