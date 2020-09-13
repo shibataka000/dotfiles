@@ -40,8 +40,7 @@ alias k=kubectl
 alias kw="watch kubectl"
 if [ $(which kubectl) ]; then
     source <(kubectl completion bash)
-    complete -o default -F __start_kubectl k
-    complete -o default -F __start_kubectl kw
+    complete -o default -F __start_kubectl k kw
 fi
 
 # kubectx, kubens
