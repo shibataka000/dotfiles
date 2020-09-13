@@ -8,12 +8,12 @@ alias e="emacs"
 
 # golang
 export GOPATH="$HOME/go"
-export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 export GOOS="linux"
 export GOARCH="amd64"
 
 # python
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # aws
@@ -46,7 +46,7 @@ fi
 
 # kubectx, kubens
 KUBECTX="$DOTFILES/kubectx"
-export PATH="$KUBECTX:$PATH"
+export PATH="$PATH:$KUBECTX"
 source $KUBECTX/completion/kubectx.bash
 source $KUBECTX/completion/kubens.bash
 alias kctx=kubectx
