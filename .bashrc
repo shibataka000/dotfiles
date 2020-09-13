@@ -45,8 +45,12 @@ if [ $(which kubectl) ]; then
 fi
 
 # kubectx, kubens
-alias kc=kubectx
-alias kn=kubens
+KUBECTX="$DOTFILES/kubectx"
+export PATH="$KUBECTX:$PATH"
+source $KUBECTX/completion/kubectx.bash
+source $KUBECTX/completion/kubens.bash
+alias kctx=kubectx
+alias kns=kubens
 
 # kube-ps1
 . $DOTFILES/kube-ps1/kube-ps1.sh
