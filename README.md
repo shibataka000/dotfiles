@@ -20,6 +20,9 @@ ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 # vscode
 ln -s $DOTFILES/.code/settings.json $HOME/.config/Code/User/settings.json
 ln -s $DOTFILES/.code/keybindings.json $HOME/.config/Code/User/keybindings.json
+
+# grip
+cp $DOTFILES/.grip/settings.py $HOME/.grip/settings.py
 ```
 
 ## Author
