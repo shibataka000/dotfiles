@@ -1,20 +1,20 @@
 {
-    "window.zoomLevel": 0,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.minimap.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "git.autofetch": false,
-    "git.ignoreMissingGitWarning": true,
-    "files.defaultLanguage": "markdown",
-    "files.autoGuessEncoding": true,
     "breadcrumbs.enabled": false,
     "editor.copyWithSyntaxHighlighting": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "files.autoGuessEncoding": true,
+    "files.defaultLanguage": "markdown",
+    "files.insertFinalNewline": true,
     "files.watcherExclude": {
         "**/.git/**": true,
         "**/.terraform/**": true
     },
-    "files.insertFinalNewline": true,
-    "editor.formatOnSave": true,
+    "git.autofetch": false,
+    "git.enableSmartCommit": true,
+    "git.ignoreMissingGitWarning": true,
+    "go.useLanguageServer": true,
     "terraform.indexing": {
         "enabled": false,
         "liveIndexing": false,
@@ -27,7 +27,7 @@
     "terraform.languageServer": {
         "external": true
     },
-    "go.useLanguageServer": true,
     "window.titleBarStyle": "custom",
-    "git.enableSmartCommit": true
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile"
 }
