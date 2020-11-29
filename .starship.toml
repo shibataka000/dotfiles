@@ -1,0 +1,46 @@
+format = """
+$directory\
+$username\
+$hostname\
+$aws\
+$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$python\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = false
+
+[directory]
+style = "bold bright-blue"
+
+[username]
+format = "[$user]($style)"
+style_user = "bold green"
+
+[hostname]
+format = "[@$hostname]($style) "
+style = "bold green"
+
+[aws]
+style = "bold #FFA500"
+
+[kubernetes]
+disabled = false
+format = "on [$symbol$context(\\($namespace\\))]($style) "
+style = "bold cyan"
+
+[git_branch]
+symbol = "🌱 "
+
+[python]
+format = "(via [$symbol$virtualenv]($style) )"
+python_binary = "python3"
+
+[character]
+success_symbol = "[\\$](bold blue)"
+error_symbol = "[\\$](bold red)"

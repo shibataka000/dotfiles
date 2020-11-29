@@ -17,6 +17,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # aws
+export AWS_PROFILE="default"
 if [ $(which aws) ]; then
     complete -C aws_completer aws
 fi
@@ -64,4 +65,10 @@ export XDG_CONFIG_HOME=$HOME/.config
 # kind
 if [ $(which kind) ]; then
     source <(kind completion bash)
+fi
+
+# starship
+export STARSHIP_CONFIG=$DOTFILES/.starship.toml
+if [ $(which starship) ]; then
+    eval "$(starship init bash)"
 fi
