@@ -12,6 +12,7 @@
         "**/.terraform/**": true
     },
     "git.autofetch": false,
+    "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
     "go.useLanguageServer": true,
