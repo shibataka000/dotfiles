@@ -17,6 +17,8 @@ add_newline = false
 
 [directory]
 style = "bold bright-blue"
+truncation_length = 99
+truncation_symbol = "…/"
 
 [username]
 format = "[$user]($style)"
@@ -35,7 +37,7 @@ format = "on [$symbol$context(\\($namespace\\))]($style) "
 style = "bold cyan"
 
 [git_branch]
-symbol = "🌱 "
+symbol = "🌳 "
 
 [python]
 format = "(via [$symbol$virtualenv]($style) )"
