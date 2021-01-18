@@ -54,6 +54,9 @@ alias kns=kubens
 
 # kustomize
 export XDG_CONFIG_HOME=$HOME/.config
+if [ $(which kustomize) ]; then
+    source <(kustomize completion bash)
+fi
 
 # kind
 if [ $(which kind) ]; then
