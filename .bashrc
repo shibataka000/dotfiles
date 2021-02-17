@@ -63,6 +63,11 @@ if [ $(which kind) ]; then
     source <(kind completion bash)
 fi
 
+# flux
+if [ $(which flux) ]; then
+    source <(flux completion bash)
+fi
+
 # starship
 export STARSHIP_CONFIG=$DOTFILES/.starship.toml
 if [ $(which starship) ]; then
