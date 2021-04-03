@@ -3,6 +3,7 @@
     "editor.copyWithSyntaxHighlighting": false,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
     "files.defaultLanguage": "markdown",
@@ -15,6 +16,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
+    "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
     "terraform.indexing": {
         "enabled": false,
@@ -29,6 +31,7 @@
         "external": true
     },
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0,
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.decorations.colors": false,
     "workbench.startupEditor": "newUntitledFile"
 }
