@@ -39,6 +39,7 @@ fi
 # kubectl
 alias k=kubectl
 alias kw="watch kubectl"
+export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 if [ $(which kubectl) ]; then
     source <(kubectl completion bash)
     complete -o default -F __start_kubectl k kw
