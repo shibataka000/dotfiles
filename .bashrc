@@ -30,6 +30,10 @@ fi
 
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials
+GCLOUD_BASH_COMPLETION=/snap/google-cloud-sdk/current/completion.bash.inc
+if [ -e $GCLOUD_BASH_COMPLETION ]; then
+    . $GCLOUD_BASH_COMPLETION
+fi
 
 # terraform
 if [ $(which terraform) ]; then
