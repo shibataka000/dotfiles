@@ -22,5 +22,10 @@
         "key": "ctrl+e",
         "command": "cursorEnd",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
     }
 ]
