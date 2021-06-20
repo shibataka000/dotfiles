@@ -2,7 +2,7 @@
     "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.copyWithSyntaxHighlighting": false,
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
@@ -20,7 +20,7 @@
     "git.ignoreMissingGitWarning": true,
     "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
-    "markdown.preview.fontSize": 15,
+    "markdown.preview.fontSize": 14,
     "security.workspace.trust.enabled": false,
     "terraform.languageServer": {
         "external": true
