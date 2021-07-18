@@ -78,3 +78,8 @@ export STARSHIP_CONFIG=$DOTFILES/.starship.toml
 if [ $(which starship) ]; then
     eval "$(starship init bash)"
 fi
+
+# go-get-release
+if [ $(which go-get-release) ]; then
+    source <(go-get-release completion bash)
+fi
