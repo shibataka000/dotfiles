@@ -45,7 +45,6 @@ alias k="kubectl"
 alias kw="watch kubectl"
 export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 if [ $(which kubectl) ]; then
-    source <(kubectl completion bash)
     complete -o default -F __start_kubectl k kw
 fi
 
@@ -59,19 +58,6 @@ source "${KUBECTX}/completion/kubens.bash"
 
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
-if [ $(which kustomize) ]; then
-    source <(kustomize completion bash)
-fi
-
-# kind
-if [ $(which kind) ]; then
-    source <(kind completion bash)
-fi
-
-# flux
-if [ $(which flux) ]; then
-    source <(flux completion bash)
-fi
 
 # starship
 export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
@@ -79,7 +65,15 @@ if [ $(which starship) ]; then
     eval "$(starship init bash)"
 fi
 
-# go-get-release
-if [ $(which go-get-release) ]; then
-    source <(go-get-release completion bash)
+# stern
+if [ $(which stern) ]; then
+    source <(stern --completion bash)
 fi
+
+# completion
+for app in kubectl kind kustomize flux argo go-get-release
+do
+    if [ $(which "${app}") ]; then
+        source <(${app} completion bash)
+    fi
+done
