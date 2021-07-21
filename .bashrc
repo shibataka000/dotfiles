@@ -6,6 +6,12 @@ alias ll="ls -l"
 # emacs
 alias emacs="emacs -nw"
 
+# starship
+export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
+if [ $(which starship) ]; then
+    eval "$(starship init bash)"
+fi
+
 # golang
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
@@ -59,10 +65,14 @@ source "${KUBECTX}/completion/kubens.bash"
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-# starship
-export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
-if [ $(which starship) ]; then
-    eval "$(starship init bash)"
+# istio
+if [ $(which istioctl) ]; then
+    ISTIOCTL_BASH_COMPLETION="/tmp/istioctl.bash.$(istioctl version --remote=false)"
+    if [ ! -e "${ISTIOCTL_BASH_COMPLETION}" ]; then
+        istioctl collateral --bash -o /tmp
+        mv /tmp/istioctl.bash "${ISTIOCTL_BASH_COMPLETION}"
+    fi
+    source "${ISTIOCTL_BASH_COMPLETION}"
 fi
 
 # stern
