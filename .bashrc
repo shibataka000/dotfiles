@@ -6,12 +6,6 @@ alias ll="ls -l"
 # emacs
 alias emacs="emacs -nw"
 
-# starship
-export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
-if [ $(which starship) ]; then
-    eval "$(starship init bash)"
-fi
-
 # golang
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
@@ -21,6 +15,12 @@ export GOARCH="amd64"
 # python
 export PATH="${PATH}:${HOME}/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
+
+# starship
+export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
+if [ $(which starship) ]; then
+    eval "$(starship init bash)"
+fi
 
 # aws
 export AWS_PROFILE="default"
