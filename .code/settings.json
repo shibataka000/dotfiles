@@ -36,7 +36,8 @@
     "workbench.startupEditor": "newUntitledFile",
     "[markdown]": {
         "files.trimFinalNewlines": false,
-        "files.trimTrailingWhitespace": false
+        "files.trimTrailingWhitespace": false,
+        "workbench.editor.languageDetection": false
     },
     "[terraform]": {
         "editor.codeLens": false
