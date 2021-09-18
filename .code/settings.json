@@ -14,6 +14,7 @@
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/.git/**": true,
+        "**/node_modules/*/**": true,
         "**/.terraform/**": true
     },
     "git.autofetch": false,
@@ -24,9 +25,6 @@
     "go.useLanguageServer": true,
     "markdown.preview.fontSize": 14,
     "security.workspace.trust.enabled": false,
-    "terraform.languageServer": {
-        "external": true
-    },
     "window.titleBarStyle": "custom",
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
