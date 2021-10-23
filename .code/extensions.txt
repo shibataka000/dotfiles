@@ -2,6 +2,7 @@ donjayamanne.githistory
 GitHub.remotehub
 golang.go
 hashicorp.terraform
+marp-team.marp-vscode
 MS-CEINTL.vscode-language-pack-ja
 ms-python.python
 ms-python.vscode-pylance
