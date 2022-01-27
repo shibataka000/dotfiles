@@ -58,14 +58,6 @@ fi
 # krew
 export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 
-# kubectx, kubens
-alias kctx="kubectx"
-alias kns="kubens"
-KUBECTX="${DOTFILES}/kubectx"
-export PATH="${PATH}:${KUBECTX}"
-source "${KUBECTX}/completion/kubectx.bash"
-source "${KUBECTX}/completion/kubens.bash"
-
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
 
