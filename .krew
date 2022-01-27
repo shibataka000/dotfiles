@@ -7,5 +7,6 @@ ns
 open-svc
 rolesum
 status
+stern
 view-allocations
 view-secret

@@ -61,11 +61,6 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-# stern
-if [ $(command -v stern) ]; then
-    source <(stern --completion bash)
-fi
-
 # completion
 for app in flux go-get-release istioctl kind kustomize
 do
