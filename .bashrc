@@ -55,6 +55,9 @@ if [ $(which kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
 
+# krew
+export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
+
 # kubectx, kubens
 alias kctx="kubectx"
 alias kns="kubens"
