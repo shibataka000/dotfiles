@@ -18,13 +18,13 @@ export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
 export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
-if [ $(which starship) ]; then
+if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi
 
 # aws
 export AWS_PROFILE="default"
-if [ $(which aws) ]; then
+if [ $(command -v aws) ]; then
     complete -C aws_completer aws
 fi
 
@@ -42,7 +42,7 @@ if [ -e "${GCLOUD_BASH_COMPLETION}" ]; then
 fi
 
 # terraform
-if [ $(which terraform) ]; then
+if [ $(command -v terraform) ]; then
     complete -C terraform terraform
 fi
 
@@ -50,7 +50,7 @@ fi
 alias k="kubectl"
 alias kw="watch kubectl"
 export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
-if [ $(which kubectl) ]; then
+if [ $(command -v kubectl) ]; then
     source <(kubectl completion bash)
     complete -o default -F __start_kubectl k kw
 fi
@@ -62,7 +62,7 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 # istio
-if [ $(which istioctl) ]; then
+if [ $(command -v istioctl) ]; then
     ISTIOCTL_BASH_COMPLETION="/tmp/istioctl.bash.$(istioctl version --remote=false)"
     if [ ! -e "${ISTIOCTL_BASH_COMPLETION}" ]; then
         istioctl collateral --bash -o /tmp
@@ -72,14 +72,14 @@ if [ $(which istioctl) ]; then
 fi
 
 # stern
-if [ $(which stern) ]; then
+if [ $(command -v stern) ]; then
     source <(stern --completion bash)
 fi
 
 # completion
 for app in kind kustomize flux argo go-get-release
 do
-    if [ $(which "${app}") ]; then
+    if [ $(command -v "${app}") ]; then
         source <(${app} completion bash)
     fi
 done
