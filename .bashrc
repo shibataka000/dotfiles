@@ -61,23 +61,13 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-# istio
-if [ $(command -v istioctl) ]; then
-    ISTIOCTL_BASH_COMPLETION="/tmp/istioctl.bash.$(istioctl version --remote=false)"
-    if [ ! -e "${ISTIOCTL_BASH_COMPLETION}" ]; then
-        istioctl collateral --bash -o /tmp
-        mv /tmp/istioctl.bash "${ISTIOCTL_BASH_COMPLETION}"
-    fi
-    source "${ISTIOCTL_BASH_COMPLETION}"
-fi
-
 # stern
 if [ $(command -v stern) ]; then
     source <(stern --completion bash)
 fi
 
 # completion
-for app in kind kustomize flux argo go-get-release
+for app in flux go-get-release istioctl kind kustomize
 do
     if [ $(command -v "${app}") ]; then
         source <(${app} completion bash)
