@@ -10,3 +10,4 @@ status
 stern
 view-allocations
 view-secret
+cert-manager
