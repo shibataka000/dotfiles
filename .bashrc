@@ -41,6 +41,14 @@ if [ -e "${GCLOUD_BASH_COMPLETION}" ]; then
     source "${GCLOUD_BASH_COMPLETION}"
 fi
 
+# completion
+for app in flux go-get-release kubectl istioctl kind kustomize
+do
+    if [ $(command -v "${app}") ]; then
+        source <(${app} completion bash)
+    fi
+done
+
 # terraform
 if [ $(command -v terraform) ]; then
     complete -C terraform terraform
@@ -51,7 +59,6 @@ alias k="kubectl"
 alias kw="watch kubectl"
 export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 if [ $(command -v kubectl) ]; then
-    source <(kubectl completion bash)
     complete -o default -F __start_kubectl k kw
 fi
 
@@ -61,10 +68,8 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-# completion
-for app in flux go-get-release istioctl kind kustomize
-do
-    if [ $(command -v "${app}") ]; then
-        source <(${app} completion bash)
-    fi
-done
+# go-get-release
+alias gr="go-get-release"
+if [ $(command -v go-get-release) ]; then
+    complete -o default -F _go_get_release_bash_autocomplete gr
+fi
