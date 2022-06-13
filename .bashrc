@@ -2,6 +2,7 @@ DOTFILES="${HOME}/.dotfiles"
 
 # general
 alias ll="ls -l"
+alias diff="diff -u -N --color=auto"
 
 # emacs
 alias emacs="emacs -nw"
