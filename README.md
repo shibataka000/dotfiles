@@ -1,7 +1,6 @@
 # dotfiles
 
 ## Install
-
 ```bash
 DOTFILES=/path/to/dotfiles
 
@@ -29,7 +28,3 @@ $ cat <<EOF >> $HOME/.gitconfig
 	path = $DOTFILES/.gitconfig
 EOF
 ```
-
-## Author
-
-[shibataka000](https://github.com/shibataka000)
