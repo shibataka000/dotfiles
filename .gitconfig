@@ -1,2 +1,5 @@
 [core]
 	editor = vi
+
+[alias]
+	graph = log --graph
