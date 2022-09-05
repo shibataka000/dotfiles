@@ -7,9 +7,6 @@ DOTFILES=/path/to/dotfiles
 # bashrc
 echo ". $DOTFILES/.bashrc" >> $HOME/.bashrc
 
-# emacs
-ln -s $DOTFILES/.emacs.d/init.el $HOME/.emacs.d/init.el
-
 # vim
 ln -s $DOTFILES/.vimrc $HOME/.vimrc
 
