@@ -42,14 +42,6 @@ if [ -e "${GCLOUD_BASH_COMPLETION}" ]; then
     source "${GCLOUD_BASH_COMPLETION}"
 fi
 
-# completion
-for app in flux go-get-release kubectl istioctl kind kustomize
-do
-    if [ $(command -v "${app}") ]; then
-        source <(${app} completion bash)
-    fi
-done
-
 # terraform
 if [ $(command -v terraform) ]; then
     complete -C terraform terraform
@@ -68,3 +60,11 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
+
+# completion
+for app in flux go-get-release kubectl istioctl kind kustomize
+do
+    if [ $(command -v "${app}") ]; then
+        source <(${app} completion bash)
+    fi
+done
