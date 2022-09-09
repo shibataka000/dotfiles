@@ -20,6 +20,9 @@ ln -s $DOTFILES/.code/keybindings.json $HOME/.config/Code/User/keybindings.json
 # grip
 ln -s $DOTFILES/.grip/settings.py $HOME/.grip/settings.py
 
+# gh
+ln -s $DOTFILES/.gh/config.yml $HOME/.config/gh/config.yml 
+
 # git
 $ cat <<EOF >> $HOME/.gitconfig
 [include]
