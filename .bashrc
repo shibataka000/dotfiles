@@ -68,9 +68,3 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # kustomize
 export XDG_CONFIG_HOME="${HOME}/.config"
-
-# go-get-release
-alias gr="go-get-release"
-if [ $(command -v go-get-release) ]; then
-    complete -o default -F _go_get_release_bash_autocomplete gr
-fi
