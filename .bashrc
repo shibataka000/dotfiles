@@ -47,6 +47,11 @@ if [ $(command -v terraform) ]; then
     complete -C terraform terraform
 fi
 
+# gh
+if [ $(command -v gh) ]; then
+    source <(gh completion -s bash)
+fi
+
 # kubectl
 alias k="kubectl"
 alias kw="watch kubectl"
