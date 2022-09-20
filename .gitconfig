@@ -3,6 +3,7 @@
 
 [alias]
 	graph = log --graph
+	cb = !git branch | grep -v -e "$(git branch --show-current)" -e "main" -e "master" | xargs git branch -d
 
 [credential "https://github.com"]
 	helper =
