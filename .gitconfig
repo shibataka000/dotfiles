@@ -4,6 +4,7 @@
 [alias]
 	graph = log --graph
 	cb = !git branch | grep -v -e "$(git branch --show-current)" -e "$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}')" | xargs -I '{}' git branch -d '{}'
+	cbf = !git branch | grep -v -e "$(git branch --show-current)" -e "$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}')" | xargs -I '{}' git branch -D '{}'
 
 [credential "https://github.com"]
 	helper =
