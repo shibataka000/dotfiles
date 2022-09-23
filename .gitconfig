@@ -3,7 +3,7 @@
 
 [alias]
 	graph = log --graph
-	clb = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | grep -v "$(git branch --show-current)" | xargs -I '{}' git branch -d '{}'
+	clb = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
 	cb = !git pull -p && git clb
 
 [credential "https://github.com"]
