@@ -67,7 +67,7 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 # completion
-for app in kubectl kustomize kind istioctl go-get-release
+for app in kubectl kustomize kind istioctl
 do
     if [ $(command -v "${app}") ]; then
         source <(${app} completion bash)
