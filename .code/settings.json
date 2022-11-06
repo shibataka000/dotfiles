@@ -28,6 +28,16 @@
     "security.workspace.trust.enabled": false,
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 0.5,
+    "workbench.colorCustomizations": {
+        "[GitHub Light*]": {
+            "activityBar.background": "#f6f8fa",
+            "editor.background": "#f8f8f8",
+            "editor.lineHighlightBackground": "#f8f8f8",
+            "editorGutter.deletedBackground": "#ff8182",
+            "editorGutter.modifiedBackground": "#d4a72c"
+        }
+    },
+    "workbench.colorTheme": "GitHub Light Default",
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
     "workbench.startupEditor": "newUntitledFile",
