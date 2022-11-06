@@ -27,5 +27,10 @@
         "key": "ctrl+w",
         "command": "workbench.action.closeWindow",
         "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k ctrl+v",
+        "command": "markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     }
 ]
