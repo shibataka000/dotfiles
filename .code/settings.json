@@ -31,6 +31,8 @@
     "workbench.colorCustomizations": {
         "[GitHub Light*]": {
             "activityBar.background": "#f6f8fa",
+            "button.background": "#0088ff",
+            "button.hoverBackground": "#0566d5",
             "editor.background": "#f8f8f8",
             "editor.lineHighlightBackground": "#f8f8f8",
             "editorGutter.deletedBackground": "#ff8182",
