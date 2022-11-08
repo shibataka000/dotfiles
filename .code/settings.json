@@ -27,7 +27,6 @@
     "markdown.preview.fontSize": 14,
     "security.workspace.trust.enabled": false,
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0.5,
     "workbench.colorCustomizations": {
         "[GitHub Light*]": {
             "activityBar.background": "#f6f8fa",
