@@ -32,8 +32,8 @@
             "activityBar.background": "#f6f8fa",
             "button.background": "#0088ff",
             "button.hoverBackground": "#0566d5",
-            "editor.background": "#f8f8f8",
-            "editor.lineHighlightBackground": "#f8f8f8",
+            "editor.background": "#f2f2f2",
+            "editor.lineHighlightBackground": "#f2f2f2",
             "editorGutter.deletedBackground": "#ff8182",
             "editorGutter.modifiedBackground": "#d4a72c"
         }
