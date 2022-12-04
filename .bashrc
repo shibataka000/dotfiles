@@ -4,9 +4,6 @@ DOTFILES="${HOME}/.dotfiles"
 alias ll="ls -l"
 alias diff="diff -u -N --color=auto"
 
-# emacs
-alias emacs="emacs -nw"
-
 # golang
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
