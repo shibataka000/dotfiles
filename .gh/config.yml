@@ -11,6 +11,7 @@ aliases:
     co: pr checkout
     list: '!gh "$1" list -R $(gh search repos "$2" -q .[0].fullName --json fullName)'
     view: '!gh "$1" view -R $(gh search repos "$2" -q .[0].fullName --json fullName) "$3"'
+    install: '!go-get-release $1'
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
 http_unix_socket:
 # What web browser gh should use when opening URLs. If blank, will refer to environment.
