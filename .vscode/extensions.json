@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "golang.go",
+        "hashicorp.terraform",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "ms-vscode-remote.remote-ssh",
+    ]
+}
