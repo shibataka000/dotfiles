@@ -57,6 +57,9 @@ if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
 
+# kubectl plugin completion
+export PATH="${PATH}:${DOTFILES}/.kubectl-plugin-completion"
+
 # krew
 export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 
