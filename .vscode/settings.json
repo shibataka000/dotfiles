@@ -9,12 +9,15 @@
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
     "files.defaultLanguage": "markdown",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.terraform": true
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/.git/**": true,
-        "**/node_modules/*/**": true,
         "**/.terraform/**": true
     },
     "git.autofetch": false,
@@ -23,6 +26,10 @@
     "git.ignoreMissingGitWarning": true,
     "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
+    "search.exclude": {
+        "**/.git": true,
+        "**/.terraform": true
+    },
     "security.workspace.trust.enabled": false,
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 0.5,
