@@ -67,7 +67,7 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 # completion
-for app in argo kubectl kustomize kind
+for app in argo istioctl kubectl kustomize kind
 do
     if [ $(command -v "${app}") ]; then
         source <(${app} completion bash)
