@@ -4,6 +4,7 @@
 [alias]
 	clean-branches = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
 	cb = clean-branches
+	push-force = push --force-with-lease --force-if-includes
 
 [credential "https://github.com"]
 	helper =
