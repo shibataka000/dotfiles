@@ -2,7 +2,6 @@
 	editor = vi
 
 [alias]
-	graph = log --graph
 	clean-branches = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
 	cb = clean-branches
 
