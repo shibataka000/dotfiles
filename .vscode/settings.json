@@ -32,7 +32,7 @@
     },
     "security.workspace.trust.enabled": false,
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 1,
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
     "workbench.startupEditor": "newUntitledFile",
