@@ -49,6 +49,11 @@ if [ $(command -v gh) ]; then
     source <(gh completion -s bash)
 fi
 
+# tsh
+if [ $(command -v tsh) ]; then
+    source <(tsh --completion-script-bash)
+fi
+
 # kubectl
 alias k="kubectl"
 alias kw="watch kubectl"
