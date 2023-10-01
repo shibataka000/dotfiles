@@ -1,6 +1,5 @@
-DOTFILES="${HOME}/.dotfiles"
-
 # general
+DOTFILES="${HOME}/.dotfiles"
 alias ll="ls -l"
 alias diff="diff -u -N --color=auto"
 
