@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "grip",
+            "type": "shell",
+            "command": "grip ${file}",
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "echo": false,
+                "showReuseMessage": false,
+                "close": true,
+            }
+        },
+        {
+            "label": "dailyreport",
+            "type": "shell",
+            "command": "dailyreport show worktime",
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "echo": false,
+                "showReuseMessage": false,
+            }
+        }
+    ]
+}

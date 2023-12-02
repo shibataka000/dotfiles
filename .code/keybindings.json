@@ -31,5 +31,13 @@
         "key": "ctrl+k ctrl+v",
         "command": "markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+k t",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "ctrl+k ctrl+t",
+        "command": "workbench.action.tasks.runTask"
     }
 ]
