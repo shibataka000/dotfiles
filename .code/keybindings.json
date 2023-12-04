@@ -33,7 +33,7 @@
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     },
     {
-        "key": "ctrl+t",
+        "key": "ctrl+k ctrl+t",
         "command": "workbench.action.tasks.runTask"
     }
 ]
