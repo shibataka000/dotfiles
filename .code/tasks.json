@@ -2,6 +2,17 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "dailyreport",
+            "type": "shell",
+            "command": "source ~/.dailyreport/daily && dailyreport show worktime",
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "echo": false,
+                "showReuseMessage": false
+            }
+        },
+        {
             "label": "grip",
             "type": "shell",
             "command": "grip ${file}",
@@ -10,18 +21,7 @@
                 "clear": true,
                 "echo": false,
                 "showReuseMessage": false,
-                "close": true,
-            }
-        },
-        {
-            "label": "dailyreport",
-            "type": "shell",
-            "command": "source ~/.dailyreport/daily && dailyreport show worktime",
-            "problemMatcher": [],
-            "presentation": {
-                "clear": true,
-                "echo": false,
-                "showReuseMessage": false,
+                "close": true
             }
         }
     ]
