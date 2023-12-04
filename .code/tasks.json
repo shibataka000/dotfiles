@@ -16,7 +16,7 @@
         {
             "label": "dailyreport",
             "type": "shell",
-            "command": "dailyreport show worktime",
+            "command": "source ~/.dailyreport/daily && dailyreport show worktime",
             "problemMatcher": [],
             "presentation": {
                 "clear": true,
