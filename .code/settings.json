@@ -5,7 +5,7 @@
     "editor.copyWithSyntaxHighlighting": false,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
