@@ -9,7 +9,8 @@
             "presentation": {
                 "clear": true,
                 "echo": false,
-                "showReuseMessage": false
+                "showReuseMessage": false,
+                "focus": true
             }
         },
         {
