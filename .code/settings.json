@@ -6,6 +6,7 @@
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
+    "editor.stickyScroll.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
