@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+kubectl-view_allocations __complete "$@"
