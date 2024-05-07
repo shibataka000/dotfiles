@@ -2,8 +2,7 @@
 	editor = vi
 
 [alias]
-	clean-branches = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
-	cb = clean-branches
+	pb = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
 	push-force = push --force-with-lease --force-if-includes
 
 [credential "https://github.com"]
