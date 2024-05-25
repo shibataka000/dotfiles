@@ -4,7 +4,7 @@
         {
             "label": "grip",
             "type": "shell",
-            "command": "grip ${file}",
+            "command": "grip '${file}'",
             "problemMatcher": [],
             "presentation": {
                 "clear": true,
