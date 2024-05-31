@@ -1,5 +1,6 @@
 [core]
 	editor = vi
+	symlinks = false
 
 [alias]
 	pb = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
