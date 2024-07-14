@@ -5,7 +5,9 @@
 DOTFILES=/path/to/dotfiles
 
 # bashrc
-echo ". $DOTFILES/.bashrc" >> $HOME/.bashrc
+echo ". $DOTFILES/.bash/.bashrc" >> $HOME/.bashrc
+ln -s $DOTFILES/.bash/.bash_aliases >> $HOME/.bash_aliases
+ln -s $DOTFILES/.bash/.bash_completion >> $HOME/.bash_completion
 
 # vim
 ln -s $DOTFILES/.vimrc $HOME/.vimrc

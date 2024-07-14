@@ -1,0 +1,42 @@
+# dotfiles
+DOTFILES="${HOME}/.dotfiles"
+
+# aws
+if [ $(command -v aws) ]; then
+    complete -C aws_completer aws
+fi
+
+# gcp
+GCLOUD_BASH_COMPLETION="/snap/google-cloud-sdk/current/completion.bash.inc"
+if [ -e "${GCLOUD_BASH_COMPLETION}" ]; then
+    source "${GCLOUD_BASH_COMPLETION}"
+fi
+
+# gh
+if [ $(command -v gh) ]; then
+    source <(gh completion -s bash)
+fi
+
+# kubectl
+if [ $(command -v kubectl) ]; then
+    complete -o default -F __start_kubectl k kw
+    export PATH="${PATH}:${DOTFILES}/.kubectl-plugin-completion"
+fi
+
+# terraform
+if [ $(command -v terraform) ]; then
+    complete -C terraform terraform
+fi
+
+# tsh
+if [ $(command -v tsh) ]; then
+    source <(tsh --completion-script-bash)
+fi
+
+# other
+for app in argo istioctl kubectl kustomize kind
+do
+    if [ $(command -v "${app}") ]; then
+        source <(${app} completion bash)
+    fi
+done
