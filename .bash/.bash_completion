@@ -20,8 +20,8 @@ fi
 # kubectl
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
-    export PATH="${PATH}:${DOTFILES}/.kubectl-plugin-completion"
 fi
+export PATH="${PATH}:${DOTFILES}/.kubectl-plugin-completion"
 
 # terraform
 if [ $(command -v terraform) ]; then
