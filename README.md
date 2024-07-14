@@ -16,6 +16,7 @@ ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 # vscode
 ln -s $DOTFILES/.code/settings.json $HOME/.config/Code/User/settings.json
 ln -s $DOTFILES/.code/keybindings.json $HOME/.config/Code/User/keybindings.json
+ln -s $DOTFILES/.code/tasks.json $HOME/.config/Code/User/tasks.json
 
 # grip
 ln -s $DOTFILES/.grip/settings.py $HOME/.grip/settings.py
