@@ -33,7 +33,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
-export STARSHIP_CONFIG="${DOTFILES}/.starship.toml"
+export STARSHIP_CONFIG="${DOTFILES}/.starship/starship.toml"
 if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi
