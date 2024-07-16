@@ -1,6 +1,9 @@
 # dotfiles
 DOTFILES="${HOME}/.dotfiles"
 
+# asdf
+source "${HOME}/.asdf/completions/asdf.bash"
+
 # aws
 if [ $(command -v aws) ]; then
     complete -C aws_completer aws

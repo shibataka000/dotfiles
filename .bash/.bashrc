@@ -1,6 +1,9 @@
 # dotfiles
 DOTFILES="${HOME}/.dotfiles"
 
+# asdf
+. "${HOME}/.asdf/asdf.sh"
+
 # aws
 export AWS_PROFILE="default"
 
