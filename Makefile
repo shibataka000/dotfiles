@@ -7,7 +7,7 @@ $(HOME)/.bash_%:
 	ln -s $(PWD)/.bash/$(@F) $@
 
 $(HOME)/.config/Code/User/%:
-	ln -s $(PWD)/.code/$(@F) $@
+	ln -s $(PWD)/.vscode/$(@F) $@
 
 $(HOME)/.config/gh/config.yml:
 	ln -s $(PWD)/.gh/config.yml $@
