@@ -15,8 +15,10 @@
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
+    "editor.renderWhitespace": "all",
     "editor.stickyScroll.enabled": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
     "files.defaultLanguage": "markdown",
@@ -35,6 +37,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
+    "git.openRepositoryInParentFolders": "never",
     "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
     "search.exclude": {
