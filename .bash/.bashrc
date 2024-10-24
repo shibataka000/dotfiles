@@ -16,7 +16,7 @@ fi
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.gcp/credentials"
 
-# golang
+# go
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
 export GOOS="linux"
