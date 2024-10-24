@@ -35,5 +35,9 @@
     {
         "key": "ctrl+k ctrl+t",
         "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "workbench.action.files.saveWithoutFormatting"
     }
 ]
