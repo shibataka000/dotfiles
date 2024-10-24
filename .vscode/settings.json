@@ -1,4 +1,7 @@
 {
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[markdown]": {
         "editor.unicodeHighlight.invisibleCharacters": false,
         "files.trimFinalNewlines": false,
