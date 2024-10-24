@@ -1,6 +1,7 @@
 # dotfiles
 
 ## Install
+
 ```bash
 # Make symbolic links.
 make install
