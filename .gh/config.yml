@@ -10,9 +10,9 @@ pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
   co: pr checkout
-  release list-in: '!gh release list -R $(gh search repos "${1}" -q .[0].fullName --json fullName)'
-  release view-in: '!gh release view -R $(gh search repos "${1}" -q .[0].fullName --json fullName) "${2}"'
-  release install: '!gh-release-install --repo "$(gh search repos ${1} --jq .[0].fullName --json fullName -L 1)" --tag "$(gh release view -R $(gh search repos ${1} --jq .[0].fullName --json fullName -L 1) --jq .tagName --json tagName ${2})" --token "$(gh auth token)" --dir "${HOME}/.gh/bin"'
+  release list-in: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)" gh release list'
+  release view-in: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)" gh release view "${2}"'
+  release install: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)"; GH_REPO="${GH_REPO}" GH_TOKEN="$(gh auth token)" gh-release-install --tag "$(gh release view -R ${GH_REPO} --jq .tagName --json tagName ${2})" --dir "${HOME}/.gh/bin"'
   ratelimit: api /rate_limit
   annotations: "!gh api /repos/${1}/actions/workflows --paginate -q .workflows[].url | xargs -I{URL} gh api {URL}/runs?per_page=${2:-1} -q .workflow_runs[].jobs_url | xargs -I{JOBS_URL} gh api {JOBS_URL} --paginate -q .jobs[].check_run_url | xargs -I{CHECK_RUN_URL} gh api {CHECK_RUN_URL}/annotations --paginate"
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
