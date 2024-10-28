@@ -5,8 +5,11 @@ DOTFILES="${HOME}/.dotfiles"
 source "${HOME}/.asdf/completions/asdf.bash"
 
 # aws
-if [ $(command -v aws) ]; then
+if [ $(command -v aws_completer) ]; then
     complete -C aws_completer aws
+fi
+if [ -e "/snap/aws-cli/current/bin/aws_completer" ]; then
+    complete -C /snap/aws-cli/current/bin/aws_completer aws
 fi
 
 # gcp
