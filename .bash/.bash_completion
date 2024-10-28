@@ -1,6 +1,9 @@
 # dotfiles
 DOTFILES="${HOME}/.dotfiles"
 
+# gh
+export PATH="${PATH}:${HOME}/.gh/bin"
+
 # asdf
 if [ -e "${HOME}/.asdf/completions/asdf.bash" ]; then
     source "${HOME}/.asdf/completions/asdf.bash"
