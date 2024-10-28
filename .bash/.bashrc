@@ -20,10 +20,8 @@ export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.gcp/credentials"
 export PATH="${PATH}:${HOME}/.gh/bin"
 
 # go
-export GOPATH="${HOME}/go"
-export PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
-export GOOS="linux"
-export GOARCH="amd64"
+export PATH="${PATH}:/usr/local/go/bin"
+export PATH="${PATH}:${HOME}/go/bin"
 
 # krew
 export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
