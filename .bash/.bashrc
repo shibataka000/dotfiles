@@ -2,7 +2,9 @@
 DOTFILES="${HOME}/.dotfiles"
 
 # asdf
-. "${HOME}/.asdf/asdf.sh"
+if [ -e "${HOME}/.asdf/asdf.sh" ]; then
+    source "${HOME}/.asdf/asdf.sh"
+fi
 
 # aws
 export AWS_PROFILE="default"

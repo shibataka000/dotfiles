@@ -2,7 +2,9 @@
 DOTFILES="${HOME}/.dotfiles"
 
 # asdf
-source "${HOME}/.asdf/completions/asdf.bash"
+if [ -e "${HOME}/.asdf/completions/asdf.bash" ]; then
+    source "${HOME}/.asdf/completions/asdf.bash"
+fi
 
 # aws
 if [ $(command -v aws_completer) ]; then
