@@ -1,3 +1,5 @@
+# This should be read before .bash_completion
+
 # dotfiles
 DOTFILES="${HOME}/.dotfiles"
 
