@@ -12,7 +12,7 @@ aliases:
   co: pr checkout
   release list-in: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)" gh release list'
   release view-in: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)" gh release view "${2}"'
-  release install: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)"; if [ -n "${GH_REPO}" ]; then echo "repository \"${GH_REPO}\" was selected"; gh-release-install --repo "${GH_REPO}" --tag "$(gh release view -R ${GH_REPO} --jq .tagName --json tagName ${2})" --token "$(gh auth token)" --dir "${HOME}/.gh/bin"; else echo "no repository was found"; exit 1; fi'
+  release install: '!GH_REPO="$(gh search repos ${1} -q .[0].fullName --json fullName)"; if [ -n "${GH_REPO}" ]; then echo "Repository \"${GH_REPO}\" was selected."; gh-release-install --repo "${GH_REPO}" --tag "$(gh release view -R ${GH_REPO} --jq .tagName --json tagName ${2})" --token "$(gh auth token)" --dir "${HOME}/.gh/bin"; else echo "No repository was found."; exit 1; fi'
   ratelimit: api /rate_limit
   annotations: "!gh api /repos/${1}/actions/workflows --paginate -q .workflows[].url | xargs -I{URL} gh api {URL}/runs?per_page=${2:-1} -q .workflow_runs[].jobs_url | xargs -I{JOBS_URL} gh api {JOBS_URL} --paginate -q .jobs[].check_run_url | xargs -I{CHECK_RUN_URL} gh api {CHECK_RUN_URL}/annotations --paginate"
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
