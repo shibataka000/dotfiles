@@ -3,7 +3,8 @@
 	symlinks = false
 
 [alias]
-	pb = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
+	branch-prune = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
+	log-oneline = log --oneline --graph
 	push-force = push --force-with-lease --force-if-includes
 
 [credential "https://github.com"]
