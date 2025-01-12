@@ -11,10 +11,10 @@
             "problemMatcher": [],
             "presentation": {
                 "clear": true,
+                "close": true,
                 "echo": false,
                 "focus": true,
-                "showReuseMessage": false,
-                "close": true
+                "showReuseMessage": false
             }
         },
         {
@@ -36,10 +36,10 @@
             "problemMatcher": [],
             "presentation": {
                 "clear": true,
+                "close": false,
                 "echo": false,
                 "focus": true,
-                "showReuseMessage": false,
-                "close": false
+                "showReuseMessage": false
             }
         }
     ]
