@@ -4,7 +4,10 @@
         {
             "label": "grip",
             "type": "shell",
-            "command": "grip '${file}'",
+            "command": "grip",
+            "args": [
+                "${file}"
+            ],
             "problemMatcher": [],
             "presentation": {
                 "clear": true,
@@ -12,6 +15,31 @@
                 "focus": true,
                 "showReuseMessage": false,
                 "close": true
+            }
+        },
+        {
+            "label": "bedrock",
+            "type": "shell",
+            "command": "aws",
+            "args": [
+                "bedrock-runtime",
+                "converse",
+                "--model-id",
+                "arn:aws:bedrock:ap-northeast-1::foundation-model/amazon.titan-text-express-v1",
+                "--messages",
+                "\"$(jq -csR '[{\"role\":\"user\",\"content\":[{\"text\":.}]}]' < '${file}')\"",
+                "--query",
+                "output.message.content[*].text",
+                "--output",
+                "text"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "echo": false,
+                "focus": true,
+                "showReuseMessage": false,
+                "close": false
             }
         }
     ]
