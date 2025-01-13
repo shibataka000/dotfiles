@@ -8,14 +8,14 @@
             "args": [
                 "${file}"
             ],
-            "problemMatcher": [],
             "presentation": {
                 "clear": true,
                 "close": true,
                 "echo": false,
                 "focus": true,
                 "showReuseMessage": false
-            }
+            },
+            "problemMatcher": []
         },
         {
             "label": "bedrock",
@@ -33,14 +33,14 @@
                 "--output",
                 "text"
             ],
-            "problemMatcher": [],
             "presentation": {
                 "clear": true,
                 "close": false,
                 "echo": false,
                 "focus": true,
                 "showReuseMessage": false
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
