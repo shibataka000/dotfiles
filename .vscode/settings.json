@@ -7,9 +7,6 @@
         "files.trimTrailingWhitespace": false,
         "workbench.editor.languageDetection": false
     },
-    "[terraform]": {
-        "editor.codeLens": false
-    },
     "breadcrumbs.enabled": false,
     "chat.editing.alwaysSaveWithGeneratedChanges": true,
     "diffEditor.ignoreTrimWhitespace": false,
