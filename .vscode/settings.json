@@ -4,7 +4,6 @@
     },
     "[markdown]": {
         "editor.unicodeHighlight.invisibleCharacters": false,
-        "files.trimFinalNewlines": false,
         "files.trimTrailingWhitespace": false,
         "workbench.editor.languageDetection": false
     },
