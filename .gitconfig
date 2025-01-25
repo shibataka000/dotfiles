@@ -4,7 +4,7 @@
 
 [alias]
 	branch-prune = !git for-each-ref --format '%(if:equals=[gone] )%(upstream:track)%(HEAD)%(then)%(refname:short)%(end)' | xargs -I '{}' git branch -D '{}'
-	log-oneline = log --oneline --graph --all
+	log-oneline = log --oneline --graph
 	lo = log-oneline
 	push-force = push --force-with-lease --force-if-includes
 
