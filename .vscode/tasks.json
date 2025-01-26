@@ -25,7 +25,7 @@
                 "bedrock-runtime",
                 "converse",
                 "--model-id",
-                "anthropic.claude-3-5-sonnet-20240620-v1:0",
+                "apac.anthropic.claude-3-5-sonnet-20240620-v1:0",
                 "--messages",
                 "\"$(jq -csR '[{\"role\":\"user\",\"content\":[{\"text\":.}]}]' < '${file}')\"",
                 "--query",
