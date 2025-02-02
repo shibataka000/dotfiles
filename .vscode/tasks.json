@@ -6,6 +6,7 @@
             "type": "shell",
             "command": "grip",
             "args": [
+                "--user-content",
                 "${file}"
             ],
             "presentation": {
