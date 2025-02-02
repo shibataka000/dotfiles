@@ -1,10 +1,4 @@
-import os
-import yaml
+import subprocess
 
-home = os.environ["HOME"]
-hosts_filepath = os.path.join(home, ".config", "gh", "hosts.yml")
-with open(hosts_filepath) as f:
-    hosts = yaml.safe_load(f)
-
-PASSWORD = hosts["github.com"]["oauth_token"]
+PASSWORD = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, check=True).stdout.strip()
 PORT = 8000
