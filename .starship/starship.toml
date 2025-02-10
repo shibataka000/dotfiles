@@ -30,6 +30,7 @@ style = "bold green"
 
 [aws]
 style = "bold #FFA500"
+force_display = true
 
 [kubernetes]
 disabled = false
