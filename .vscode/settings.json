@@ -20,6 +20,9 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
     "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.hcl": "terraform"
+    },
     "files.autoGuessEncoding": true,
     "files.defaultLanguage": "markdown",
     "files.exclude": {
