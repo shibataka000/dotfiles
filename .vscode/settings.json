@@ -51,5 +51,5 @@
     "window.titleBarStyle": "custom",
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "none"
 }
