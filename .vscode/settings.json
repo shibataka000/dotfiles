@@ -9,7 +9,6 @@
     },
     "breadcrumbs.enabled": false,
     "chat.agent.enabled": true,
-    "chat.editing.alwaysSaveWithGeneratedChanges": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.colorDecorators": false,
     "editor.copyWithSyntaxHighlighting": false,
