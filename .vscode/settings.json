@@ -50,5 +50,18 @@
     "security.workspace.trust.enabled": false,
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "mcp": {
+        "servers": {
+            "playwright": {
+                "command": "docker",
+                "args": [
+                    "run",
+                    "-i",
+                    "--rm",
+                    "ghcr.io/shibataka000/mcp-playwright:main"
+                ]
+            }
+        }
+    }
 }
