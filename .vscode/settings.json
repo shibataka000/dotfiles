@@ -57,7 +57,7 @@
                 "command": "docker",
                 "args": [
                     "run",
-                    "-i",
+                    "--interactive",
                     "--rm",
                     "--user=pwuser",
                     "mcr.microsoft.com/playwright:v1.51.1",
@@ -72,13 +72,27 @@
                 "command": "docker",
                 "args": [
                     "run",
-                    "-i",
+                    "--interactive",
                     "--rm",
                     "ghcr.io/astral-sh/uv:0.6.14-debian-slim",
                     "uvx",
                     "awslabs.aws-documentation-mcp-server@0.0.081004"
                 ]
             },
+            "notion": {
+                "command": "docker",
+                "args": [
+                    "run",
+                    "--env",
+                    "OPENAPI_MCP_HEADERS={\"Authorization\": \"Bearer ntn_****\", \"Notion-Version\": \"2022-06-28\"}",
+                    "--interactive",
+                    "--rm",
+                    "public.ecr.aws/docker/library/node:22-slim",
+                    "npx",
+                    "-y",
+                    "@notionhq/notion-mcp-server@v1.6.0"
+                ]
+            }
         }
     }
 }
