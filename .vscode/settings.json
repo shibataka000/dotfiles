@@ -59,7 +59,13 @@
                     "run",
                     "-i",
                     "--rm",
-                    "ghcr.io/shibataka000/mcp-playwright:main"
+                    "--user=pwuser",
+                    "mcr.microsoft.com/playwright:v1.51.1",
+                    "npx",
+                    "-y",
+                    "@playwright/mcp@v0.0.9",
+                    "--executable-path=/ms-playwright/chromium-1161/chrome-linux/chrome",
+                    "--headless"
                 ]
             }
         }
