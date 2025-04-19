@@ -67,7 +67,18 @@
                     "--executable-path=/ms-playwright/chromium-1161/chrome-linux/chrome",
                     "--headless"
                 ]
-            }
+            },
+            "aws-documentation": {
+                "command": "docker",
+                "args": [
+                    "run",
+                    "-i",
+                    "--rm",
+                    "ghcr.io/astral-sh/uv:0.6.14-debian-slim",
+                    "uvx",
+                    "awslabs.aws-documentation-mcp-server@0.0.081004"
+                ]
+            },
         }
     }
 }
