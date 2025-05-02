@@ -52,6 +52,14 @@
     "workbench.editor.decorations.colors": false,
     "workbench.startupEditor": "none",
     "mcp": {
+        "inputs": [
+            {
+                "type": "promptString",
+                "id": "notion-integration-secret",
+                "description": "Notion Integration Secret",
+                "password": true,
+            }
+        ],
         "servers": {
             "playwright": {
                 "command": "docker",
@@ -79,20 +87,23 @@
                     "awslabs.aws-documentation-mcp-server@0.0.081004"
                 ]
             },
-            // "notion": {
-            //     "command": "docker",
-            //     "args": [
-            //         "run",
-            //         "--env",
-            //         "OPENAPI_MCP_HEADERS={\"Authorization\": \"Bearer ntn_****\", \"Notion-Version\": \"2022-06-28\"}",
-            //         "--interactive",
-            //         "--rm",
-            //         "public.ecr.aws/docker/library/node:22-slim",
-            //         "npx",
-            //         "-y",
-            //         "@notionhq/notion-mcp-server@v1.6.0"
-            //     ]
-            // },
+            "notion": {
+                "command": "docker",
+                "args": [
+                    "run",
+                    "--env",
+                    "OPENAPI_MCP_HEADERS",
+                    "--interactive",
+                    "--rm",
+                    "public.ecr.aws/docker/library/node:22-slim",
+                    "npx",
+                    "-y",
+                    "@notionhq/notion-mcp-server@v1.6.0"
+                ],
+                "env": {
+                    "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer ${input:notion-integration-secret}\", \"Notion-Version\": \"2022-06-28\"}",
+                }
+            },
         }
     }
 }
