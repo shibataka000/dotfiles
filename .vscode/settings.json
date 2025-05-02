@@ -58,7 +58,19 @@
                 "id": "notion-integration-secret",
                 "description": "Notion Integration Secret",
                 "password": true,
-            }
+            },
+            {
+                "type": "promptString",
+                "id": "backlog-domain",
+                "description": "Backlog domain",
+                "password": false,
+            },
+            {
+                "type": "promptString",
+                "id": "backlog-api-key",
+                "description": "Backlog API key",
+                "password": true,
+            },
         ],
         "servers": {
             "playwright": {
@@ -104,6 +116,23 @@
                     "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer ${input:notion-integration-secret}\", \"Notion-Version\": \"2022-06-28\"}",
                 }
             },
+            "backlog": {
+                "command": "docker",
+                "args": [
+                    "run",
+                    "--env",
+                    "BACKLOG_DOMAIN",
+                    "--env",
+                    "BACKLOG_API_KEY",
+                    "--interactive",
+                    "--rm",
+                    "ghcr.io/nulab/backlog-mcp-server:v0.1.0"
+                ],
+                "env": {
+                    "BACKLOG_DOMAIN": "${input:backlog-domain}",
+                    "BACKLOG_API_KEY": "${input:backlog-api-key}",
+                }
+            }
         }
     }
 }
