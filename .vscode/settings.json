@@ -46,12 +46,6 @@
     "mcp": {
         "inputs": [
             {
-                "description": "Notion Integration Secret",
-                "id": "notion-integration-secret",
-                "password": true,
-                "type": "promptString"
-            },
-            {
                 "description": "Backlog domain",
                 "id": "backlog-domain",
                 "password": false,
@@ -60,6 +54,18 @@
             {
                 "description": "Backlog API key",
                 "id": "backlog-api-key",
+                "password": true,
+                "type": "promptString"
+            },
+            {
+                "description": "GitHub Personal Access Token",
+                "id": "github-token",
+                "password": true,
+                "type": "promptString"
+            },
+            {
+                "description": "Notion Integration Secret",
+                "id": "notion-integration-secret",
                 "password": true,
                 "type": "promptString"
             },
@@ -91,6 +97,20 @@
                 "env": {
                     "BACKLOG_API_KEY": "${input:backlog-api-key}",
                     "BACKLOG_DOMAIN": "${input:backlog-domain}"
+                }
+            },
+            "github": {
+                "args": [
+                    "run",
+                    "--env",
+                    "GITHUB_PERSONAL_ACCESS_TOKEN",
+                    "--interactive",
+                    "--rm",
+                    "ghcr.io/github/github-mcp-server:0.2.1"
+                ],
+                "command": "docker",
+                "env": {
+                    "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github-token}"
                 }
             },
             "notion": {
