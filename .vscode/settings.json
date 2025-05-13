@@ -80,9 +80,9 @@
                 "args": [
                     "run",
                     "--env",
-                    "BACKLOG_DOMAIN",
-                    "--env",
                     "BACKLOG_API_KEY",
+                    "--env",
+                    "BACKLOG_DOMAIN",
                     "--interactive",
                     "--rm",
                     "ghcr.io/nulab/backlog-mcp-server:v0.1.0"
