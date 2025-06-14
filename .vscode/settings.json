@@ -41,6 +41,9 @@
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.enable": {
+        "*": false
+    },
     "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
     "search.exclude": {
