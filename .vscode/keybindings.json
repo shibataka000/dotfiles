@@ -30,7 +30,7 @@
     {
         "key": "ctrl+k ctrl+v",
         "command": "markdown.showPreviewToSide",
-        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+        "when": "!notebookEditorFocused && (editorLangId == 'markdown' || editorLangId == 'instructions')"
     },
     {
         "key": "ctrl+k ctrl+t",
