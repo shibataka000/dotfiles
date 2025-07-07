@@ -17,6 +17,9 @@ if [ -e "${ARM_CREDENTIALS}" ]; then
     source "${ARM_CREDENTIALS}"
 fi
 
+# claude code
+export CLAUDE_CODE_USE_BEDROCK=1
+
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.gcp/credentials"
 
