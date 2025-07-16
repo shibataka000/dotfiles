@@ -1,7 +1,6 @@
 # This should be read after .bashrc.
 
-# dotfiles
-DOTFILES="${HOME}/.dotfiles"
+ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 
 # asdf
 if [ -e "${HOME}/.asdf/completions/asdf.bash" ]; then
@@ -31,7 +30,7 @@ fi
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
-export PATH="${PATH}:${DOTFILES}/.kubectl-plugin-completion"
+export PATH="${PATH}:${ROOT}/.kubectl-plugin-completion"
 
 # terraform
 if [ $(command -v terraform) ]; then

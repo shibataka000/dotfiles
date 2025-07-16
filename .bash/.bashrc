@@ -1,7 +1,6 @@
 # This should be read before .bash_completion
 
-# dotfiles
-DOTFILES="${HOME}/.dotfiles"
+ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 
 # asdf
 if [ -e "${HOME}/.asdf/asdf.sh" ]; then
@@ -44,7 +43,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
-export STARSHIP_CONFIG="${DOTFILES}/.starship/starship.toml"
+export STARSHIP_CONFIG="${ROOT}/.starship/starship.toml"
 if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi
