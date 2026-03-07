@@ -22,9 +22,6 @@ export CLAUDE_CODE_USE_BEDROCK=1
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.gcp/credentials"
 
-# gh
-export PATH="${PATH}:${HOME}/.gh/bin"
-
 # go
 export PATH="${PATH}:/usr/local/go/bin"
 export PATH="${PATH}:${HOME}/go/bin"
