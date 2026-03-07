@@ -32,11 +32,7 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 # kubectl
 export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 
-# kustomize
-export XDG_CONFIG_HOME="${HOME}/.config"
-
 # python
-export PATH="${PATH}:${HOME}/.local/bin"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
@@ -44,3 +40,7 @@ export STARSHIP_CONFIG="${ROOT}/.starship/starship.toml"
 if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi
+
+# XDG Base Directory
+export XDG_CONFIG_HOME="${HOME}/.config"
+export PATH="${PATH}:${HOME}/.local/bin"
