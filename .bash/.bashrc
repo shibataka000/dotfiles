@@ -41,6 +41,9 @@ if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi
 
+# tools
+export PATH="${PATH}:${HOME}/github.com/shibataka000/tools"
+
 # XDG Base Directory
 export XDG_CONFIG_HOME="${HOME}/.config"
 export PATH="${PATH}:${HOME}/.local/bin"
