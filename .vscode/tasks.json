@@ -17,31 +17,6 @@
                 "showReuseMessage": false
             },
             "problemMatcher": []
-        },
-        {
-            "label": "bedrock",
-            "type": "shell",
-            "command": "aws",
-            "args": [
-                "bedrock-runtime",
-                "converse",
-                "--model-id",
-                "apac.anthropic.claude-sonnet-4-20250514-v1:0",
-                "--messages",
-                "\"$(jq -csR '[{\"role\":\"user\",\"content\":[{\"text\":.}]}]' < '${file}')\"",
-                "--query",
-                "output.message.content[*].text",
-                "--output",
-                "text"
-            ],
-            "presentation": {
-                "clear": true,
-                "close": false,
-                "echo": false,
-                "focus": true,
-                "showReuseMessage": false
-            },
-            "problemMatcher": []
         }
     ]
 }
