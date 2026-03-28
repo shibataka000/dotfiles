@@ -9,10 +9,10 @@ $(HOME)/.bash_%:
 $(HOME)/.config/Code/User/%:
 	ln -s $(PWD)/.vscode/$(@F) $@
 
-$(HOME)/.config/gh/config.yml:
+$(HOME)/.config/gh/%:
 	ln -s $(PWD)/.gh/$(@F) $@
 
-$(HOME)/.grip/settings.py:
+$(HOME)/.grip/%:
 	ln -s $(PWD)/.grip/$(@F) $@
 
 $(HOME)/.tmux.conf:
@@ -21,11 +21,8 @@ $(HOME)/.tmux.conf:
 $(HOME)/.vimrc:
 	ln -s $(PWD)/$(@F) $@
 
-$(HOME)/.claude/settings.json:
+$(HOME)/.claude/%:
 	ln -s $(PWD)/.claude/$(@F) $@
 
-$(HOME)/.claude/statusline.sh:
-	ln -s $(PWD)/.claude/$(@F) $@
-
-$(HOME)/.copilot/copilot-instructions.md:
+$(HOME)/.copilot/%:
 	ln -s $(PWD)/.copilot/$(@F) $@
