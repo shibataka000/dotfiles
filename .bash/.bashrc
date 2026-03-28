@@ -2,11 +2,6 @@
 
 ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 
-# asdf
-if [ -e "${HOME}/.asdf/asdf.sh" ]; then
-    source "${HOME}/.asdf/asdf.sh"
-fi
-
 # aws
 export AWS_PROFILE="default"
 
