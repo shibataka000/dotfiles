@@ -10,8 +10,8 @@ Create a pull request on GitHub.
 ```bash
 PULL_REQUEST_TEMPLATE="$(git rev-parse --show-toplevel)/.github/PULL_REQUEST_TEMPLATE.md"
 if [ -f "${PULL_REQUEST_TEMPLATE}" ]; then
-  gh pr create --fill --body-file "${PULL_REQUEST_TEMPLATE}"
+  gh pr create --fill --draft --body-file "${PULL_REQUEST_TEMPLATE}"
 else
-  gh pr create --fill
+  gh pr create --fill --draft
 fi
 ```
