@@ -5,7 +5,7 @@ description: Pull requestを作成します。
 
 # gh-pr-create
 
-以下のコマンドを実行してください。
+1. 以下のコマンドを実行してください。
 
 ```bash
 PULL_REQUEST_TEMPLATE="$(git rev-parse --show-toplevel)/.github/PULL_REQUEST_TEMPLATE.md"
