@@ -1,11 +1,11 @@
 ---
 name: gh-pr-create
-description: Create a pull request on GitHub.
+description: Pull requestを作成します。
 ---
 
-Create a pull request on GitHub.
+# gh-pr-create
 
-1. Run the following commands.
+以下のコマンドを実行してください。
 
 ```bash
 PULL_REQUEST_TEMPLATE="$(git rev-parse --show-toplevel)/.github/PULL_REQUEST_TEMPLATE.md"

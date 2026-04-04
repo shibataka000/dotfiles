@@ -3,6 +3,8 @@ name: git-commit
 description: Create a new commit containing the current contents of the index and the log message describing the changes.
 ---
 
+# git-commit
+
 Create a new commit containing the current contents of the index and the log message describing the changes.
 
 - The log message should be in English.
