@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-kubectl-cert_manager __complete "$@"
