@@ -9,6 +9,7 @@
     },
     "breadcrumbs.enabled": false,
     "chat.agent.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.colorDecorators": false,
     "editor.copyWithSyntaxHighlighting": false,
