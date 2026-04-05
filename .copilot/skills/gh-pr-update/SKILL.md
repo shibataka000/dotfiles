@@ -1,6 +1,7 @@
 ---
 name: gh-pr-update
 description: Pull requestの変更内容をタイトル・本文へ反映します。
+disable-model-invocation: true
 ---
 
 # gh-pr-update

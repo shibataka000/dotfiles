@@ -1,6 +1,7 @@
 ---
 name: gh-pr-create
 description: Pull requestを作成します。
+disable-model-invocation: true
 ---
 
 # gh-pr-create
