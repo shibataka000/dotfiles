@@ -14,36 +14,37 @@ install: \
 	$(HOME)/.copilot/copilot-instructions.md \
 	$(HOME)/.copilot/mcp-config.json \
 	$(HOME)/.copilot/skills \
-	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
-	$(HOME)/.vimrc
+	$(HOME)/.vimrc \
+	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
 
 $(HOME)/.bash_%:
 	ln -s $(PWD)/.bash/$(@F) $@
 
 $(HOME)/.claude/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.claude/$(@F) $@
 
 $(HOME)/.config/Code/User/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.vscode/$(@F) $@
 
 $(HOME)/.config/gh/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.gh/$(@F) $@
 
 $(HOME)/.config/uv/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.uv/$(@F) $@
 
 $(HOME)/.copilot/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.copilot/$(@F) $@
 
-$(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
-	mkdir -p $(@D)
-	cp $(PWD)/.docker/cli-plugins/$(@F) $@
-	chmod +x $@
-
 $(HOME)/.grip/%:
+	mkdir -p $(@D)
 	ln -s $(PWD)/.grip/$(@F) $@
 
 $(HOME)/.npmrc:
@@ -54,3 +55,8 @@ $(HOME)/.tmux.conf:
 
 $(HOME)/.vimrc:
 	ln -s $(PWD)/$(@F) $@
+
+$(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
+	mkdir -p $(@D)
+	cp $(PWD)/.docker/cli-plugins/$(@F) $@
+	chmod +x $@
