@@ -14,6 +14,7 @@ install: \
 	$(HOME)/.copilot/copilot-instructions.md \
 	$(HOME)/.copilot/mcp-config.json \
 	$(HOME)/.copilot/skills \
+	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
@@ -36,6 +37,10 @@ $(HOME)/.config/uv/%:
 
 $(HOME)/.copilot/%:
 	ln -s $(PWD)/.copilot/$(@F) $@
+
+$(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
+	mkdir -p $(@D)
+	cp $(PWD)/.docker/cli-plugins/$(@F) $@
 
 $(HOME)/.grip/%:
 	ln -s $(PWD)/.grip/$(@F) $@
