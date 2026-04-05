@@ -41,7 +41,7 @@ $(HOME)/.grip/%:
 	ln -s $(PWD)/.grip/$(@F) $@
 
 $(HOME)/.npmrc:
-	ln -s $(PWD)/.npmrc $@
+	ln -s $(PWD)/$(@F) $@
 
 $(HOME)/.tmux.conf:
 	ln -s $(PWD)/$(@F) $@
