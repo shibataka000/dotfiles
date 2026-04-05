@@ -41,6 +41,7 @@ $(HOME)/.copilot/%:
 $(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
 	mkdir -p $(@D)
 	cp $(PWD)/.docker/cli-plugins/$(@F) $@
+	chown +x $@
 
 $(HOME)/.grip/%:
 	ln -s $(PWD)/.grip/$(@F) $@
