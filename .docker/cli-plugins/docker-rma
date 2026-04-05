@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -eo pipefail
+
+COMMAND=$(basename "${0}")
+
+function usage {
+    cat <<EOF
+NAME
+    ${COMMAND}
+
+SYNOPSIS
+    ${COMMAND} [options]
+
+DESCRIPTION
+    Delete all docker containers and images.
+
+OPTIONS
+    -h  help for ${COMMAND}
+EOF
+}
+
+while getopts h OPT
+do
+    case $OPT in
+        h) usage; exit;;
+        *) usage; exit 1;;
+    esac
+done
+
+if [ "${1}" = "docker-cli-plugin-metadata" ]; then
+    echo '{"SchemaVersion": "0.1.0","Vendor": "shibataka000","Version": "v0.1.0","ShortDescription": "Delete all docker containers and images"}'
+    exit
+fi
+
+DOCKER_PS=$(docker ps -aq)
+if [ -n "${DOCKER_PS}" ];  then
+    docker ps -aq | xargs docker rm
+fi
+
+DOCKER_IMAGES=$(docker images -aq)
+if [ -n "${DOCKER_IMAGES}" ]; then
+    docker images -aq | xargs docker rmi
+fi
