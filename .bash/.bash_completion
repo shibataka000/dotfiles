@@ -32,11 +32,6 @@ if [ $(command -v terraform) ]; then
     complete -C terraform terraform
 fi
 
-# tsh
-if [ $(command -v tsh) ]; then
-    source <(tsh --completion-script-bash)
-fi
-
 # other
 for app in argo istioctl kubectl kustomize kind
 do
