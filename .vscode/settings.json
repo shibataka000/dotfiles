@@ -42,6 +42,14 @@
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commit message format."
+        },
+        {
+            "text": "Write in English."
+        },
+    ],
     "github.copilot.enable": {
         "*": false
     },
