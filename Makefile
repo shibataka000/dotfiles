@@ -58,3 +58,11 @@ $(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
 	mkdir -p $(@D)
 	cp $(PWD)/.docker/cli-plugins/$(@F) $@
 	chmod +x $@
+
+.PHONY: build
+build: .copilot/bash_completion
+
+.copilot/bash_completion: FORCE
+	copilot completion bash > $@
+
+FORCE:

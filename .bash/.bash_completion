@@ -21,6 +21,9 @@ if [ $(command -v gh) ]; then
     source <(gh completion -s bash)
 fi
 
+# github copilot cli
+source ${ROOT}/.copilot/bash_completion
+
 # kubectl
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
