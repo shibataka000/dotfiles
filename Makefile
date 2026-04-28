@@ -12,7 +12,6 @@ install: \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
-	$(HOME)/.copilot/mcp-config.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
