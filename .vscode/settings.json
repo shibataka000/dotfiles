@@ -35,7 +35,8 @@
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/.git/**": true,
-        "**/.terraform/**": true
+        "**/.terraform/**": true,
+        "**/node_modules": true,
     },
     "git.autofetch": false,
     "git.confirmSync": false,
@@ -57,7 +58,8 @@
     "go.useLanguageServer": true,
     "search.exclude": {
         "**/.git": true,
-        "**/.terraform": true
+        "**/.terraform": true,
+        "**/node_modules": true,
     },
     "security.workspace.trust.enabled": false,
     "workbench.editor.decorations.badges": false,
