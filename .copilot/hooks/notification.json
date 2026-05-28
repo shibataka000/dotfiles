@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "hooks": {
+        "agentStop": [
+            {
+                "type": "command",
+                "bash": "if [ $(command -v notify-send) ]; then notify-send --app-name 'GitHub Copilot CLI' 'Agent Stop'; fi"
+            }
+        ],
+        "notification": [
+            {
+                "type": "command",
+                "bash": "if [ $(command -v notify-send) ]; then notify-send --app-name 'GitHub Copilot CLI' 'Notification'; fi"
+            }
+        ]
+    }
+}

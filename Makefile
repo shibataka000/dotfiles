@@ -12,6 +12,7 @@ install: \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
+	$(HOME)/.copilot/hooks/notification.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
@@ -37,9 +38,13 @@ $(HOME)/.config/uv/%:
 	mkdir -p $(@D)
 	ln -s $(PWD)/.uv/$(@F) $@
 
-$(HOME)/.copilot/%:
+$(HOME)/.copilot/copilot-instructions.md:
 	mkdir -p $(@D)
 	ln -s $(PWD)/.copilot/$(@F) $@
+
+$(HOME)/.copilot/hooks/%:
+	mkdir -p $(@D)
+	ln -s $(PWD)/.copilot/hooks/$(@F) $@
 
 $(HOME)/.grip/%:
 	mkdir -p $(@D)
