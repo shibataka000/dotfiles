@@ -1,7 +1,6 @@
 .DEFAULT_GOAL := install
 
-.PHONY: install
-install: \
+DOTFILES_BASE := \
 	$(HOME)/.bash_aliases \
 	$(HOME)/.bash_completion \
 	$(HOME)/.claude/settings.json \
@@ -12,12 +11,26 @@ install: \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
-	$(HOME)/.copilot/hooks/notification.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
+
+DOTFILES := $(DOTFILES_BASE) \
+	$(HOME)/.config/Code/User/keybindings.json \
+	$(HOME)/.config/Code/User/settings.json \
+	$(HOME)/.config/Code/User/tasks.json \
+	$(HOME)/.copilot/hooks/notify-send.json
+
+DOTFILES_FOR_WSL2 := $(DOTFILES_BASE) \
+	$(HOME)/.copilot/hooks/toasty.json
+
+.PHONY: install
+install: $(DOTFILES)
+
+.PHONY: install-wsl2
+install-wsl2: $(DOTFILES_FOR_WSL2)
 
 $(HOME)/.bash_%:
 	ln -s $(PWD)/.bash/$(@F) $@
