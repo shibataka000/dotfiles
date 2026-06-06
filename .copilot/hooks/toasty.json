@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "hooks": {
+        "agentStop": [
+            {
+                "type": "command",
+                "bash": "toasty.exe --app copilot 'Agent Stop'"
+            }
+        ],
+        "notification": [
+            {
+                "type": "command",
+                "bash": "toasty.exe --app copilot 'Notification'"
+            }
+        ]
+    }
+}
