@@ -17,6 +17,9 @@ export CLAUDE_CODE_USE_BEDROCK=1
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.gcp/credentials"
 
+# github copilot
+export COPILOT_ALLOW_ALL="true"
+
 # go
 export PATH="${PATH}:/usr/local/go/bin"
 export PATH="${PATH}:${HOME}/go/bin"
