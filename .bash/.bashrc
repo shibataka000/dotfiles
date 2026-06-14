@@ -1,6 +1,6 @@
 # This should be read before .bash_completion
 
-ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
+TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 
 # aws
 export AWS_PROFILE="default"
@@ -34,7 +34,7 @@ export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
-export STARSHIP_CONFIG="${ROOT}/.starship/starship.toml"
+export STARSHIP_CONFIG="${TOPLEVEL}/.starship/starship.toml"
 if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
 fi

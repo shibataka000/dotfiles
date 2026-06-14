@@ -1,6 +1,6 @@
 # This should be read after .bashrc.
 
-ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
+TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 
 # aws
 if [ $(command -v aws_completer) ]; then
@@ -22,13 +22,13 @@ if [ $(command -v gh) ]; then
 fi
 
 # github copilot cli
-source ${ROOT}/.copilot/bash_completion
+source ${TOPLEVEL}/.copilot/bash_completion
 
 # kubectl
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
-export PATH="${PATH}:${ROOT}/.kubectl-plugin-completion"
+export PATH="${PATH}:${TOPLEVEL}/.kubectl-plugin-completion"
 
 # terraform
 if [ $(command -v terraform) ]; then
