@@ -1,12 +1,12 @@
 .DEFAULT_GOAL := install
 
-IS_WSL := $(shell grep -qi microsoft /proc/version 2>/dev/null && echo 1)
-WSL_PREREQS := $(if $(IS_WSL),$(HOME)/.copilot/hooks/toasty.json)
-UBUNTU_DESKTOP_PREREQS := $(if $(IS_WSL),,\
+UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iq microsoft),\
 	$(HOME)/.config/Code/User/keybindings.json \
 	$(HOME)/.config/Code/User/settings.json \
 	$(HOME)/.config/Code/User/tasks.json \
 	$(HOME)/.copilot/hooks/notify-send.json)
+WSL_PREREQS := $(if $(shell uname -r | grep -iqv microsoft),\
+	$(HOME)/.copilot/hooks/toasty.json)
 
 .PHONY: install
 install: \
