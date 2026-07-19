@@ -12,7 +12,8 @@ install: \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
-	$(HOME)/.copilot/hooks/notification.json \
+	$(HOME)/.copilot/hooks/notify-send.json \
+	$(HOME)/.copilot/hooks/toasty.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
