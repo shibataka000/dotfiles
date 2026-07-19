@@ -1,24 +1,29 @@
 .DEFAULT_GOAL := install
 
+IS_WSL := $(shell grep -qi microsoft /proc/version 2>/dev/null && echo 1)
+WSL_PREREQS := $(if $(IS_WSL),$(HOME)/.copilot/hooks/toasty.json)
+UBUNTU_DESKTOP_PREREQS := $(if $(IS_WSL),,\
+	$(HOME)/.config/Code/User/keybindings.json \
+	$(HOME)/.config/Code/User/settings.json \
+	$(HOME)/.config/Code/User/tasks.json \
+	$(HOME)/.copilot/hooks/notify-send.json)
+
 .PHONY: install
 install: \
 	$(HOME)/.bash_aliases \
 	$(HOME)/.bash_completion \
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
-	$(HOME)/.config/Code/User/keybindings.json \
-	$(HOME)/.config/Code/User/settings.json \
-	$(HOME)/.config/Code/User/tasks.json \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
-	$(HOME)/.copilot/hooks/notify-send.json \
-	$(HOME)/.copilot/hooks/toasty.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
-	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
+	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma \
+	$(UBUNTU_DESKTOP_PREREQS) \
+	$(WSL_PREREQS)
 
 $(HOME)/.bash_%:
 	ln -s $(PWD)/.bash/$(@F) $@
