@@ -1,15 +1,6 @@
 .DEFAULT_GOAL := install
 
-UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iq microsoft),\
-	$(HOME)/.config/Code/User/keybindings.json \
-	$(HOME)/.config/Code/User/settings.json \
-	$(HOME)/.config/Code/User/tasks.json \
-	$(HOME)/.copilot/hooks/notify-send.json)
-WSL_PREREQS := $(if $(shell uname -r | grep -iqv microsoft),\
-	$(HOME)/.copilot/hooks/toasty.json)
-
-.PHONY: install
-install: \
+PREREQS := \
 	$(HOME)/.bash_aliases \
 	$(HOME)/.bash_completion \
 	$(HOME)/.claude/settings.json \
@@ -21,9 +12,19 @@ install: \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
-	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma \
-	$(UBUNTU_DESKTOP_PREREQS) \
-	$(WSL_PREREQS)
+	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
+
+UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iq microsoft),\
+	$(HOME)/.config/Code/User/keybindings.json \
+	$(HOME)/.config/Code/User/settings.json \
+	$(HOME)/.config/Code/User/tasks.json \
+	$(HOME)/.copilot/hooks/notify-send.json)
+
+WSL_PREREQS := $(if $(shell uname -r | grep -iqv microsoft),\
+	$(HOME)/.copilot/hooks/toasty.json)
+
+.PHONY: install
+install: $(PREREQS) $(UBUNTU_DESKTOP_PREREQS) $(WSL_PREREQS)
 
 $(HOME)/.bash_%:
 	ln -s $(PWD)/.bash/$(@F) $@
