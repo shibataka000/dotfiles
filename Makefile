@@ -6,6 +6,7 @@ PREREQS := \
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
 	$(HOME)/.config/gh/config.yml \
+	$(HOME)/.config/herdr/config.toml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
 	$(HOME)/.grip/settings.py \
@@ -40,6 +41,10 @@ $(HOME)/.config/Code/User/%:
 $(HOME)/.config/gh/%:
 	mkdir -p $(@D)
 	ln -s $(PWD)/.gh/$(@F) $@
+
+$(HOME)/.config/herdr/%:
+	mkdir -p $(@D)
+	ln -s $(PWD)/.herdr/$(@F) $@
 
 $(HOME)/.config/uv/%:
 	mkdir -p $(@D)
