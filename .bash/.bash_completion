@@ -36,7 +36,7 @@ if [ $(command -v terraform) ]; then
 fi
 
 # other
-for app in argo istioctl kubectl kustomize kind
+for app in argo herdr istioctl kubectl kustomize kind
 do
     if [ $(command -v "${app}") ]; then
         source <(${app} completion bash)

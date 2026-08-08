@@ -1,0 +1,7 @@
+onboarding = false
+
+[keys]
+new_workspace = "ctrl+n"
+new_tab = "ctrl+t"
+split_horizontal = ["prefix+h", "prefix+minus"]
+split_vertical = ["prefix+v", "prefix+|"]
