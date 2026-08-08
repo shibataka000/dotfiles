@@ -9,20 +9,19 @@ PREREQS := \
 	$(HOME)/.config/herdr/config.toml \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/copilot-instructions.md \
+	$(HOME)/.copilot/hooks/notification.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
 
-UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iq microsoft),\
+UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iv microsoft),\
 	$(HOME)/.config/Code/User/keybindings.json \
 	$(HOME)/.config/Code/User/settings.json \
-	$(HOME)/.config/Code/User/tasks.json \
-	$(HOME)/.copilot/hooks/notify-send.json)
+	$(HOME)/.config/Code/User/tasks.json)
 
-WSL_PREREQS := $(if $(shell uname -r | grep -iqv microsoft),\
-	$(HOME)/.copilot/hooks/toasty.json)
+WSL_PREREQS := $(if $(shell uname -r | grep -i microsoft),)
 
 .PHONY: install
 install: $(PREREQS) $(UBUNTU_DESKTOP_PREREQS) $(WSL_PREREQS)
