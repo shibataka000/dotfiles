@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Compare manifests built by kustomize from two different references in a github repository.
+function kdiff() {
+    if [ $# -ne 3 ]; then
+        echo "Usage: kdiff <url> <ref1> <ref2>"
+        return 1
+    fi
+
+    KUSTOMIZE_BUILD="kustomize build --enable-alpha-plugins"
+    echo "$ diff <(${KUSTOMIZE_BUILD} ${1}?ref=${2}) <(${KUSTOMIZE_BUILD} ${1}?ref=${3})"
+    diff -u -N --color=auto <(${KUSTOMIZE_BUILD} "${1}?ref=${2}") <(${KUSTOMIZE_BUILD} "${1}?ref=${3}")
+}
+
 # Retrieve the JSON execution plan from HCP Terraform.
 # https://developer.hashicorp.com/terraform/cloud-docs/api-docs/plans#retrieve-the-json-execution-plan
 function tfctl-retrieve-json-execution-plan() {
