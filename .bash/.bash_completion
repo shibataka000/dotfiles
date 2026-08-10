@@ -1,6 +1,4 @@
-# This should be read after .bashrc.
-
-TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
+#!/bin/bash
 
 # aws
 if [ $(command -v aws_completer) ]; then
@@ -22,13 +20,13 @@ if [ $(command -v gh) ]; then
 fi
 
 # github copilot cli
+TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 source ${TOPLEVEL}/.copilot/bash_completion
 
 # kubectl
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
-export PATH="${PATH}:${TOPLEVEL}/.kubectl-plugin-completion"
 
 # terraform
 if [ $(command -v terraform) ]; then

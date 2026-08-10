@@ -1,8 +1,6 @@
 .DEFAULT_GOAL := install
 
 PREREQS := \
-	$(HOME)/.bash_aliases \
-	$(HOME)/.bash_completion \
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
 	$(HOME)/.config/gh/config.yml \
@@ -25,9 +23,6 @@ WSL_PREREQS := $(if $(shell uname -r | grep -i microsoft),)
 
 .PHONY: install
 install: $(PREREQS) $(UBUNTU_DESKTOP_PREREQS) $(WSL_PREREQS)
-
-$(HOME)/.bash_%:
-	ln -s $(PWD)/.bash/$(@F) $@
 
 $(HOME)/.claude/%:
 	mkdir -p $(@D)
