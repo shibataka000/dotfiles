@@ -5,7 +5,6 @@ TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse -
 source ${TOPLEVEL}/.bash/.bash_env
 source ${TOPLEVEL}/.bash/.bash_aliases
 source ${TOPLEVEL}/.bash/.bash_completion
-source ${TOPLEVEL}/.bash/.bash_functions
 
 # azure
 ARM_CREDENTIALS="${HOME}/.azure/credentials"

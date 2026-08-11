@@ -30,6 +30,9 @@ export PIPENV_VENV_IN_PROJECT="true"
 TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
 export STARSHIP_CONFIG="${TOPLEVEL}/.starship/starship.toml"
 
+# tools
+export PATH="${PATH}:${HOME}/github.com/shibataka000/tools"
+
 # XDG Base Directory
 export XDG_CONFIG_HOME="${HOME}/.config"
 export PATH="${PATH}:${HOME}/.local/bin"
