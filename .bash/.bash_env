@@ -21,7 +21,6 @@ export PATH="${PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # kubectl
 export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
-export PATH="${PATH}:${TOPLEVEL}/.kubectl-plugin-completion"
 
 # python
 export PIPENV_VENV_IN_PROJECT="true"

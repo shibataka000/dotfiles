@@ -27,6 +27,7 @@ source ${TOPLEVEL}/.copilot/bash_completion
 if [ $(command -v kubectl) ]; then
     complete -o default -F __start_kubectl k kw
 fi
+export PATH="${PATH}:${TOPLEVEL}/.kubectl-plugin-completion"
 
 # terraform
 if [ $(command -v terraform) ]; then
