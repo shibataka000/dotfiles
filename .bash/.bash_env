@@ -26,7 +26,7 @@ export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 export PIPENV_VENV_IN_PROJECT="true"
 
 # starship
-TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
+TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
 export STARSHIP_CONFIG="${TOPLEVEL}/.starship/starship.toml"
 
 # tools

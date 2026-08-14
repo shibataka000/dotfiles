@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # source other files
-TOPLEVEL="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && git rev-parse --show-toplevel)"
+TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
 source ${TOPLEVEL}/.bash/.bash_env
 source ${TOPLEVEL}/.bash/.bash_aliases
 source ${TOPLEVEL}/.bash/.bash_completion
