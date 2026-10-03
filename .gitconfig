@@ -6,7 +6,7 @@
 	force-push = push --force-with-lease --force-if-includes
 	l = log --oneline --graph
 	prune-branch = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -r git branch -d
-	prune-worktree = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(worktreepath)%(end)' | xargs -r git worktree remove
+	prune-worktree = !git for-each-ref --format '%(worktreepath)' | grep '.worktrees/' | xargs -r git worktree remove
 
 [credential "https://github.com"]
 	helper =
