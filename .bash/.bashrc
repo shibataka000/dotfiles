@@ -3,14 +3,9 @@
 # source other files
 TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
 source ${TOPLEVEL}/.bash/.bash_env
+source ${TOPLEVEL}/.bash/.bash_credentials
 source ${TOPLEVEL}/.bash/.bash_aliases
 source ${TOPLEVEL}/.bash/.bash_completion
-
-# azure
-ARM_CREDENTIALS="${HOME}/.azure/credentials"
-if [ -e "${ARM_CREDENTIALS}" ]; then
-    source "${ARM_CREDENTIALS}"
-fi
 
 # starship
 if [ $(command -v starship) ]; then
