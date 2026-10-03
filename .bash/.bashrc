@@ -7,6 +7,11 @@ source ${TOPLEVEL}/.bash/.bash_credentials
 source ${TOPLEVEL}/.bash/.bash_aliases
 source ${TOPLEVEL}/.bash/.bash_completion
 
+# direnv
+if [ $(command -v direnv) ]; then
+    eval "$(direnv hook bash)"
+fi
+
 # starship
 if [ $(command -v starship) ]; then
     eval "$(starship init bash)"
