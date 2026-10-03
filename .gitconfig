@@ -3,10 +3,10 @@
 	symlinks = false
 
 [alias]
-	branch-prune = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -r git branch -d
-	worktree-prune = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(worktreepath)%(end)' | xargs -r git worktree remove
+	force-push = push --force-with-lease --force-if-includes
 	l = log --oneline --graph
-	push-force = push --force-with-lease --force-if-includes
+	prune-branch = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -r git branch -d
+	prune-worktree = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(worktreepath)%(end)' | xargs -r git worktree remove
 
 [credential "https://github.com"]
 	helper =
