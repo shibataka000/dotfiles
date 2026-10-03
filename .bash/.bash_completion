@@ -29,6 +29,11 @@ if [ $(command -v kubectl) ]; then
 fi
 export PATH="${PATH}:${TOPLEVEL}/.kubectl-plugin-completion"
 
+# pup
+if [ $(command -v pup) ]; then
+    source <(pup completions bash)
+fi
+
 # terraform
 if [ $(command -v terraform) ]; then
     complete -C terraform terraform
