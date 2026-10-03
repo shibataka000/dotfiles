@@ -5,8 +5,8 @@
 [alias]
 	force-push = push --force-with-lease --force-if-includes
 	l = log --oneline --graph
-	prune-branch = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -r git branch -d
-	prune-worktree = !git for-each-ref --format '%(worktreepath)' | grep '.worktrees/' | xargs -r git worktree remove
+	prune-branch = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -I '{}' -r git branch -d '{}'
+	prune-worktree = !git for-each-ref --format '%(worktreepath)' | grep '.worktrees/' | xargs -I '{}' -r git worktree remove '{}'
 
 [credential "https://github.com"]
 	helper =
