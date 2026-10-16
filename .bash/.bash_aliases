@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias copilot="copilot --yolo"
 alias diff="diff -u -N --color=auto"
 alias k="kubectl"
 alias kw="watch kubectl"
