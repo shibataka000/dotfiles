@@ -6,7 +6,6 @@ PREREQS := \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/herdr/config.toml \
 	$(HOME)/.config/uv/uv.toml \
-	$(HOME)/.copilot/copilot-instructions.md \
 	$(HOME)/.copilot/hooks/notification.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
@@ -43,10 +42,6 @@ $(HOME)/.config/herdr/%:
 $(HOME)/.config/uv/%:
 	mkdir -p $(@D)
 	ln -s $(PWD)/.uv/$(@F) $@
-
-$(HOME)/.copilot/copilot-instructions.md:
-	mkdir -p $(@D)
-	ln -s $(PWD)/.copilot/$(@F) $@
 
 $(HOME)/.copilot/hooks/%:
 	mkdir -p $(@D)
