@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := install
 
-PREREQS := \
+PREREQUISITES := \
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
 	$(HOME)/.config/gh/config.yml \
@@ -13,15 +13,15 @@ PREREQS := \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
 
-UBUNTU_DESKTOP_PREREQS := $(if $(shell uname -r | grep -iv microsoft),\
+UBUNTU_DESKTOP_PREREQUISITES := $(if $(shell uname -r | grep -iv microsoft),\
 	$(HOME)/.config/Code/User/keybindings.json \
 	$(HOME)/.config/Code/User/settings.json \
 	$(HOME)/.config/Code/User/tasks.json)
 
-WSL_PREREQS := $(if $(shell uname -r | grep -i microsoft),)
+WSL_PREREQUISITES := $(if $(shell uname -r | grep -i microsoft),)
 
 .PHONY: install
-install: $(PREREQS) $(UBUNTU_DESKTOP_PREREQS) $(WSL_PREREQS)
+install: $(PREREQUISITES) $(UBUNTU_DESKTOP_PREREQUISITES) $(WSL_PREREQUISITES)
 
 $(HOME)/.claude/%:
 	mkdir -p $(@D)
