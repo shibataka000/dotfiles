@@ -66,9 +66,17 @@ $(HOME)/snap/docker/current/.docker/cli-plugins/%: .docker/cli-plugins/%
 	chmod +x $@
 
 .PHONY: build
-build: .copilot/bash_completion
+build: .copilot/bash_completion $(addprefix .kubectl-plugin-completion/kubectl_complete-,$(shell kubectl krew list | sed -e 's/-/_/') argo-rollouts)
 
 .copilot/bash_completion: FORCE
 	copilot completion bash > $@
+
+.kubectl-plugin-completion/%:
+	echo "#!/usr/bin/env sh\n$(shell echo $(@F) | sed -e 's/kubectl_complete-/kubectl-/') __complete \"\$$@\"" > $@
+	chmod +x $@
+
+.PHONY: clean
+clean:
+	rm .kubectl-plugin-completion/*
 
 FORCE:
