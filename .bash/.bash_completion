@@ -21,7 +21,7 @@ fi
 
 # github copilot cli
 TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
-source ${TOPLEVEL}/.copilot/bash_completion
+source ${TOPLEVEL}/.copilot/completion.bash
 
 # kubectl
 if [ $(command -v kubectl) ]; then
