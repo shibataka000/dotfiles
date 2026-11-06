@@ -8,12 +8,6 @@ if [ -e "/snap/aws-cli/current/bin/aws_completer" ]; then
     complete -C /snap/aws-cli/current/bin/aws_completer aws
 fi
 
-# gcp
-GCLOUD_BASH_COMPLETION="/snap/google-cloud-sdk/current/completion.bash.inc"
-if [ -e "${GCLOUD_BASH_COMPLETION}" ]; then
-    source "${GCLOUD_BASH_COMPLETION}"
-fi
-
 # gh
 if [ $(command -v gh) ]; then
     source <(gh completion -s bash)
