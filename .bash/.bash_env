@@ -19,10 +19,6 @@ export KUBECTL_EXTERNAL_DIFF="diff -u -N --color=auto"
 # python
 export PIPENV_VENV_IN_PROJECT="true"
 
-# starship
-TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
-export STARSHIP_CONFIG="${TOPLEVEL}/.starship/starship.toml"
-
 # tools
 export PATH="${PATH}:${HOME}/github.com/shibataka000/tools"
 
