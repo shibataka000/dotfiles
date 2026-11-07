@@ -24,13 +24,13 @@ INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),)
 .PHONY: install
 install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FPR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
 
-$(HOME)/%:
+$(HOME)/%: $(PWD)/%
 	mkdir -p $(@D)
-	ln -s $(PWD)/$* $@
+	ln -s $(realpath $<) $@
 
-$(HOME)/snap/docker/current/.docker/cli-plugins/%: snap/docker/current/.docker/cli-plugins/%
+$(HOME)/snap/docker/current/.docker/cli-plugins/%: $(PWD)/snap/docker/current/.docker/cli-plugins/%
 	mkdir -p $(@D)
-	cp $(PWD)/$< $@
+	cp $(realpath $<) $@
 	chmod +x $@
 
 .PHONY: build
