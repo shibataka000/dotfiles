@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := install
 
-PREREQUISITES := \
+INSTALL_TARGETS := \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/starship.toml \
 	$(HOME)/.config/uv/uv.toml \
@@ -10,7 +10,7 @@ PREREQUISITES := \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
 
-UBUNTU_DESKTOP_PREREQUISITES := $(if $(shell uname -r | grep -iv microsoft),\
+INSTALL_TARGETS_FOR_UBUNTU_DESKTOP := $(if $(shell uname -r | grep -iv microsoft),\
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
 	$(HOME)/.codex/config.toml \
@@ -19,10 +19,10 @@ UBUNTU_DESKTOP_PREREQUISITES := $(if $(shell uname -r | grep -iv microsoft),\
 	$(HOME)/.config/Code/User/tasks.json \
 	$(HOME)/.copilot/settings.json)
 
-WSL_PREREQUISITES := $(if $(shell uname -r | grep -i microsoft),)
+INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),)
 
 .PHONY: install
-install: $(PREREQUISITES) $(UBUNTU_DESKTOP_PREREQUISITES) $(WSL_PREREQUISITES)
+install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FPR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
 
 $(HOME)/%:
 	mkdir -p $(@D)
