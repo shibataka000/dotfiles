@@ -3,7 +3,7 @@
 # aws
 export AWS_PROFILE="default"
 
-# claude code
+# claude
 export CLAUDE_CODE_USE_BEDROCK=1
 
 # go
