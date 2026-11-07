@@ -13,9 +13,11 @@ PREREQUISITES := \
 UBUNTU_DESKTOP_PREREQUISITES := $(if $(shell uname -r | grep -iv microsoft),\
 	$(HOME)/.claude/settings.json \
 	$(HOME)/.claude/statusline.sh \
+	$(HOME)/.codex/config.toml \
 	$(HOME)/.config/Code/User/keybindings.json \
 	$(HOME)/.config/Code/User/settings.json \
-	$(HOME)/.config/Code/User/tasks.json)
+	$(HOME)/.config/Code/User/tasks.json \
+	$(HOME)/.copilot/settings.json)
 
 WSL_PREREQUISITES := $(if $(shell uname -r | grep -i microsoft),)
 
