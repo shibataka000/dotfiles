@@ -2,9 +2,9 @@
 
 # source other files
 TOPLEVEL="$(git -C "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" rev-parse --show-toplevel)"
-source ${TOPLEVEL}/.bash/.bash_env
-source ${TOPLEVEL}/.bash/.bash_aliases
-source ${TOPLEVEL}/.bash/.bash_completion
+source ${TOPLEVEL}/.bash/environment
+source ${TOPLEVEL}/.bash/aliases
+source ${TOPLEVEL}/.bash/completion
 
 # direnv
 if [ $(command -v direnv) ]; then
