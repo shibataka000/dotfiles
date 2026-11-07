@@ -32,7 +32,7 @@ $(HOME)/snap/docker/current/.docker/cli-plugins/%: snap/docker/current/.docker/c
 	chmod +x $@
 
 .PHONY: build
-build: .copilot/completion.bash $(foreach plugin,$(shell kubectl krew list) argo-rollouts,.kubectl-plugin-completion/kubectl_complete-$(plugin))
+build: .copilot/completion.bash $(addprefix .kubectl-plugin-completion/kubectl_complete-,$(shell kubectl krew list) argo-rollouts)
 
 .copilot/completion.bash: FORCE
 	copilot completion bash > $@
