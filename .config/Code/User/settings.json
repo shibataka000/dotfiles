@@ -54,6 +54,10 @@
         "**/node_modules": true,
     },
     "security.workspace.trust.enabled": false,
+    "textlint.autoFixOnSave": true,
+    "textlint.languages": [
+        "markdown"
+    ],
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
     "workbench.startupEditor": "none"

@@ -6,6 +6,7 @@ INSTALL_TARGETS := \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
+	$(HOME)/.textlintrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
