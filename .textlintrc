@@ -1,0 +1,25 @@
+{
+    "rules": {
+        "preset-ja-spacing": {
+            "ja-space-around-code": {
+                "after": true,
+                "before": true
+            },
+            "ja-space-around-emphasis": {
+                "after": true,
+                "before": true
+            },
+            "ja-space-around-link": {
+                "after": true,
+                "before": true
+            },
+            "ja-space-around-strong": {
+                "after": true,
+                "before": true
+            },
+            "ja-space-between-half-and-full-width": {
+                "space": "always"
+            }
+        }
+    }
+}
