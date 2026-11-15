@@ -1,21 +1,22 @@
 {
+  "autoTier": "balance",
   "enabledPlugins": {},
-  "model": "claude-sonnet-4.6",
+  "experimental": false,
   "extraKnownMarketplaces": {},
   "footer": {
-    "showModelEffort": true,
-    "showDirectory": true,
-    "showBranch": true,
-    "showContextWindow": true,
-    "showQuota": true,
-    "showAiUsed": true,
     "showAgent": true,
+    "showAiUsed": true,
+    "showBranch": true,
     "showCodeChanges": true,
-    "showUsername": false,
+    "showContextWindow": true,
+    "showCustom": true,
+    "showDirectory": true,
+    "showModelEffort": true,
+    "showQuota": true,
     "showSandbox": true,
-    "showYolo": false,
-    "showCustom": true
+    "showUsername": false,
+    "showYolo": false
   },
-  "experimental": false,
+  "model": "auto",
   "theme": "default"
 }
