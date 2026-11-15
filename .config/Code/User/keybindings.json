@@ -39,9 +39,5 @@
     {
         "key": "ctrl+k ctrl+s",
         "command": "workbench.action.files.saveWithoutFormatting"
-    },
-    {
-        "key": "ctrl+k ctrl+r",
-        "command": "git.refresh"
     }
 ]
