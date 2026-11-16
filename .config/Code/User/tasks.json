@@ -17,6 +17,23 @@
                 "showReuseMessage": false
             },
             "problemMatcher": []
+        },
+        {
+            "label": "textlint",
+            "type": "shell",
+            "command": "textlint",
+            "args": [
+                "--fix",
+                "${file}"
+            ],
+            "presentation": {
+                "clear": true,
+                "close": false,
+                "echo": false,
+                "focus": true,
+                "showReuseMessage": true
+            },
+            "problemMatcher": []
         }
     ]
 }

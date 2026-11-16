@@ -1,15 +1,18 @@
 {
-    "[json][jsonc]": {
+    "[json][jsonc][jsonl]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "[markdown]": {
+    "[markdown][instructions][skill]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
         "editor.unicodeHighlight.invisibleCharacters": false,
         "files.trimTrailingWhitespace": false,
         "workbench.editor.languageDetection": false
     },
+    "[terraform][terraform-deploy][terraform-mock][terraform-search][terraform-stack][terraform-test][terraform-vars][terraform-version]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
     "breadcrumbs.enabled": false,
-    "chat.agent.enabled": true,
-    "chat.viewSessions.orientation": "stacked",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.colorDecorators": false,
     "editor.copyWithSyntaxHighlighting": false,
@@ -37,25 +40,25 @@
     "files.watcherExclude": {
         "**/.git/**": true,
         "**/.terraform/**": true,
-        "**/node_modules": true,
+        "**/.venv/**": true,
+        "**/node_modules/**": true
     },
     "git.autofetch": false,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
     "git.openRepositoryInParentFolders": "never",
-    "github.copilot.enable": {
-        "*": false
-    },
     "go.toolsManagement.autoUpdate": true,
     "go.useLanguageServer": true,
+    "scm.repositories.selectionMode": "single",
     "search.exclude": {
         "**/.git": true,
         "**/.terraform": true,
-        "**/node_modules": true,
+        "**/.venv": true,
+        "**/node_modules": true
     },
     "security.workspace.trust.enabled": false,
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "newUntitledFile"
 }
