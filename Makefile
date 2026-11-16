@@ -20,7 +20,10 @@ INSTALL_TARGETS_FOR_UBUNTU_DESKTOP := $(if $(shell uname -r | grep -iv microsoft
 	$(HOME)/.config/Code/User/tasks.json \
 	$(HOME)/.copilot/settings.json)
 
-INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),)
+INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),\
+	$(HOME)/.vscode-server/data/Machine/keybindings.json \
+	$(HOME)/.vscode-server/data/Machine/settings.json \
+	$(HOME)/.vscode-server/data/Machine/tasks.json)
 
 .PHONY: install
 install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FPR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
