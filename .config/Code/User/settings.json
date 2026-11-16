@@ -32,14 +32,12 @@
     "files.autoGuessEncoding": true,
     "files.defaultLanguage": "markdown",
     "files.exclude": {
-        "**/.git": true,
         "**/.terraform": true
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
-        "**/.git/**": true,
         "**/.terraform/**": true,
         "**/.venv/**": true,
         "**/node_modules/**": true
@@ -53,10 +51,7 @@
     "go.useLanguageServer": true,
     "scm.repositories.selectionMode": "single",
     "search.exclude": {
-        "**/.git": true,
-        "**/.terraform": true,
-        "**/.venv": true,
-        "**/node_modules": true
+        "**/.venv": true
     },
     "security.workspace.trust.enabled": false,
     "workbench.editor.decorations.badges": false,
