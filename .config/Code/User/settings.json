@@ -20,6 +20,7 @@
     "editor.stickyScroll.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
+    "extensions.autoUpdateDelay": 168,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
         "*.hcl": "terraform"
