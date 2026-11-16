@@ -1,6 +1,6 @@
 [core]
 	editor = vi
-	symlinks = false
+	symlinks = true
 
 [alias]
 	branch-prune = !git for-each-ref --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | xargs -I '{}' -r git branch -D '{}'
