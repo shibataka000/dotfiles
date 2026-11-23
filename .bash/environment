@@ -3,9 +3,6 @@
 # aws
 export AWS_PROFILE="default"
 
-# claude
-export CLAUDE_CODE_USE_BEDROCK=1
-
 # go
 export PATH="${PATH}:/usr/local/go/bin"
 export PATH="${PATH}:${HOME}/go/bin"

@@ -1,7 +1,30 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "~/.claude/statusline.sh"
+    "command": "${HOME}/.claude/statusline.sh"
   },
-  "alwaysThinkingEnabled": false
+  "tui": "fullscreen",
+  "model": "sonnet",
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send --app-name 'Claude Code' 'Notification'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send --app-name 'Claude Code' 'Stop'"
+          }
+        ]
+      }
+    ]
+  }
 }
