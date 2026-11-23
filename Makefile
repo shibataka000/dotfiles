@@ -1,5 +1,4 @@
 .DEFAULT_GOAL := install
-DIFFFLAGS := -u -N --color=auto --strip-trailing-cr
 
 INSTALL_TARGETS := \
 	$(HOME)/.claude/settings.json \
@@ -46,10 +45,6 @@ build: .copilot/completion.bash $(addprefix .kubectl-plugin-completion/kubectl_c
 .kubectl-plugin-completion/%:
 	echo "#!/usr/bin/env sh\n$(shell echo $(@F) | sed -e 's/kubectl_complete-/kubectl-/') __complete \"\$$@\"" > $@
 	chmod +x $@
-
-.PHONY: diff
-diff:
-	$(foreach f,$(wildcard .config/Code/User/*),diff $(DIFFFLAGS) $(f) /mnt/c/Users/$(shell whoami)/AppData/Roaming/Code/User/$(notdir $(f));)
 
 .PHONY: clean
 clean:
