@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := install
+DIFFFLAGS := -u -N --color=auto --strip-trailing-cr
 
 INSTALL_TARGETS := \
 	$(HOME)/.config/gh/config.yml \
@@ -24,7 +25,7 @@ INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),\
 	$(HOME)/.vscode-server/data/Machine/settings.json)
 
 .PHONY: install
-install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FPR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
+install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FOR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
 
 $(HOME)/%: %
 	mkdir -p $(@D)
@@ -45,8 +46,12 @@ build: .copilot/completion.bash $(addprefix .kubectl-plugin-completion/kubectl_c
 	echo "#!/usr/bin/env sh\n$(shell echo $(@F) | sed -e 's/kubectl_complete-/kubectl-/') __complete \"\$$@\"" > $@
 	chmod +x $@
 
+.PHONY: diff
+diff:
+	$(foreach f,$(wildcard .config/Code/User/*),diff $(DIFFFLAGS) $(f) /mnt/c/Users/$(shell whoami)/AppData/Roaming/Code/User/$(notdir $(f));)
+
 .PHONY: clean
 clean:
-	rm .kubectl-plugin-completion/*
+	$(RM) .kubectl-plugin-completion/*
 
 FORCE:
