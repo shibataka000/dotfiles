@@ -19,5 +19,6 @@
   "ide": {
     "autoConnect": false
   },
-  "showReasoning": false
+  "showReasoning": false,
+  "theme": "default"
 }
