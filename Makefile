@@ -2,17 +2,16 @@
 
 INSTALL_TARGETS := \
 	$(HOME)/.claude/settings.json \
-	$(HOME)/.claude/statusline.sh \
 	$(HOME)/.codex/config.toml \
 	$(HOME)/.config/gh/config.yml \
 	$(HOME)/.config/starship.toml \
+	$(HOME)/.config/tmux/tmux.conf \
 	$(HOME)/.config/uv/uv.toml \
 	$(HOME)/.copilot/hooks/notify-send.json \
 	$(HOME)/.copilot/settings.json \
 	$(HOME)/.grip/settings.py \
 	$(HOME)/.npmrc \
 	$(HOME)/.textlintrc \
-	$(HOME)/.tmux.conf \
 	$(HOME)/.vimrc \
 	$(HOME)/snap/docker/current/.docker/cli-plugins/docker-rma
 
