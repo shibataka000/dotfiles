@@ -20,8 +20,7 @@ INSTALL_TARGETS_FOR_UBUNTU_DESKTOP := $(if $(shell uname -r | grep -iv microsoft
 	$(HOME)/.config/Code/User/settings.json \
 	$(HOME)/.config/Code/User/tasks.json)
 
-INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),\
-	$(HOME)/.vscode-server/data/Machine/settings.json)
+INSTALL_TARGETS_FOR_WSL := $(if $(shell uname -r | grep -i microsoft),)
 
 .PHONY: install
 install: $(INSTALL_TARGETS) $(INSTALL_TARGETS_FOR_UBUNTU_DESKTOP) $(INSTALL_TARGETS_FOR_WSL)
